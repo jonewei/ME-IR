@@ -1,0 +1,49 @@
+2026-01-20 15:47:35,079 - INFO - ============================================================
+2026-01-20 15:47:35,079 - INFO - 🚀 Starting Mathematical Expression Retrieval Evaluation
+2026-01-20 15:47:35,079 - INFO - ============================================================
+2026-01-20 15:47:35,082 - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-20 15:47:39,530 - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-20 15:47:41,150 - INFO - 🔧 Building search pipeline components...
+2026-01-20 15:47:44,766 - INFO -    Features: 20
+2026-01-20 15:47:44,766 - INFO -    Normalize: False
+2026-01-20 15:47:44,766 - INFO -    Strict validation: False
+2026-01-20 15:47:44,784 - INFO - ✅ Loaded LightGBM model from models/lgbm_ranker.txt
+2026-01-20 15:47:44,784 - INFO -    Model features: 20
+2026-01-20 15:47:44,784 - INFO -    Model trees: 100
+2026-01-20 15:47:44,784 - INFO - ✅ Loading STS model: math-similarity/Bert-MLM_arXiv-MP-class_zbMath
+2026-01-20 15:47:44,784 - INFO -    Device: cuda
+2026-01-20 15:47:44,785 - INFO -    Threshold: 0.6
+2026-01-20 15:47:44,787 - INFO - Use pytorch device_name: cuda
+2026-01-20 15:47:44,787 - INFO - Load pretrained SentenceTransformer: math-similarity/Bert-MLM_arXiv-MP-class_zbMath
+2026-01-20 15:47:52,516 - INFO - ⚠️  TEST MODE: Processing only first 20 queries.
+2026-01-20 15:47:52,522 - INFO - 
+------------------------------
+2026-01-20 15:47:52,522 - INFO - 🔍 EVALUATION IN PROGRESS
+2026-01-20 15:47:52,522 - INFO - ------------------------------
+2026-01-20 15:47:52,524 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,524 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,524 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,525 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,525 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,525 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,526 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,526 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,526 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,526 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,527 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,527 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,527 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,527 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,528 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,528 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,528 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,529 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,529 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,529 - ERROR - Stage 1 失败: Approach0HashIndex.retrieve() got an unexpected keyword argument 'query_ast'
+2026-01-20 15:47:52,531 - INFO - 💾 TREC run saved to results/20260120_154752/run.trec
+2026-01-20 15:47:52,534 - INFO - 
+============================================================
+2026-01-20 15:47:52,534 - INFO - ✅ Evaluation Complete!
+2026-01-20 15:47:52,534 - INFO - 📊 Results directory: results/20260120_154752
+2026-01-20 15:47:52,534 - INFO - 📈  Metrics: {'Recall@K': 0.0, 'MAP': 0.0, 'nDCG@K': 0.0}
+2026-01-20 15:47:52,534 - INFO - ============================================================

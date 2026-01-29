@@ -1,0 +1,54 @@
+2026-01-20 13:25:24,564 - INFO - ============================================================
+2026-01-20 13:25:24,564 - INFO - 🚀 Starting Mathematical Expression Retrieval Evaluation
+2026-01-20 13:25:24,564 - INFO - ============================================================
+2026-01-20 13:25:24,568 - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-20 13:25:27,846 - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-20 13:25:31,199 - INFO - 📂 Loaded index from artifacts/approach0_index.pkl (277815 buckets, 455241 formulas)
+2026-01-20 13:25:31,219 - INFO - 🔧 Building search pipeline components...
+2026-01-20 13:25:35,534 - INFO -    Features: 20
+2026-01-20 13:25:35,534 - INFO -    Normalize: False
+2026-01-20 13:25:35,534 - INFO -    Strict validation: False
+2026-01-20 13:25:35,553 - INFO - ✅ Loaded LightGBM model from models/lgbm_ranker.txt
+2026-01-20 13:25:35,553 - INFO -    Model features: 20
+2026-01-20 13:25:35,554 - INFO -    Model trees: 100
+2026-01-20 13:25:35,554 - INFO - ✅ Loading STS model: math-similarity/Bert-MLM_arXiv-MP-class_zbMath
+2026-01-20 13:25:35,554 - INFO -    Device: cuda
+2026-01-20 13:25:35,554 - INFO -    Threshold: 0.6
+2026-01-20 13:25:35,557 - INFO - Use pytorch device_name: cuda
+2026-01-20 13:25:35,557 - INFO - Load pretrained SentenceTransformer: math-similarity/Bert-MLM_arXiv-MP-class_zbMath
+2026-01-20 13:25:41,511 - INFO - ⚠️  TEST MODE: Processing only first 20 queries.
+2026-01-20 13:25:41,517 - INFO - 
+------------------------------
+2026-01-20 13:25:41,517 - INFO - 🔍 EVALUATION IN PROGRESS
+2026-01-20 13:25:41,517 - INFO - ------------------------------
+2026-01-20 13:25:41,795 - INFO - 📊 Stage 1 (Recall): 109 candidates, 耗时 0.277s
+2026-01-20 13:25:43,726 - INFO - 📊 Stage 2 (Coarse Rank): 109 candidates
+2026-01-20 13:25:43,726 - INFO -    Top 3: ['8231647', '8291597', '875396']
+2026-01-20 13:25:43,726 - INFO - 🔍 Applying STS filter (threshold=0.6) to 109 candidates
+2026-01-20 13:25:48,384 - INFO - 📊 STS filtered: 89 remaining (过滤率: 18.3%)
+2026-01-20 13:25:48,384 - INFO - 📊 Stage 3 (Filtering): 89 candidates, 过滤率: 18.35%
+2026-01-20 13:25:48,385 - INFO - 📊 Stage 4 (Graph Prior): 89 candidates
+2026-01-20 13:25:48,385 - INFO -    Final Top 3: ['8231647', '8291597', '875396']
+2026-01-20 13:25:48,385 - INFO - 📊 Final Result: 89 candidates returned
+2026-01-20 13:25:48,385 - INFO - Total Time: 6.866s
+2026-01-20 13:25:48,651 - INFO - 📊 Stage 1 (Recall): 96 candidates, 耗时 0.265s
+2026-01-20 13:25:50,138 - INFO - 📊 Stage 2 (Coarse Rank): 96 candidates
+2026-01-20 13:25:50,138 - INFO -    Top 3: ['8231819', '8230604', '2740294']
+2026-01-20 13:25:50,138 - INFO - 🔍 Applying STS filter (threshold=0.6) to 96 candidates
+2026-01-20 13:25:54,175 - INFO - 📊 STS filtered: 83 remaining (过滤率: 13.5%)
+2026-01-20 13:25:54,176 - INFO - 📊 Stage 3 (Filtering): 83 candidates, 过滤率: 13.54%
+2026-01-20 13:25:54,176 - INFO - 📊 Stage 4 (Graph Prior): 83 candidates
+2026-01-20 13:25:54,176 - INFO -    Final Top 3: ['8231819', '8230604', '2740294']
+2026-01-20 13:25:54,176 - INFO - 📊 Final Result: 83 candidates returned
+2026-01-20 13:25:54,177 - INFO - Total Time: 5.790s
+2026-01-20 13:25:54,177 - INFO - 📊 Stage 1 (Recall): 14 candidates, 耗时 0.000s
+2026-01-20 13:25:54,405 - INFO - 📊 Stage 2 (Coarse Rank): 14 candidates
+2026-01-20 13:25:54,405 - INFO -    Top 3: ['448041', '3511925', '5218087']
+2026-01-20 13:25:54,406 - INFO - 🔍 Applying STS filter (threshold=0.6) to 14 candidates
+2026-01-20 13:25:54,916 - INFO - 📊 STS filtered: 14 remaining (过滤率: 0.0%)
+2026-01-20 13:25:54,916 - INFO - 📊 Stage 3 (Filtering): 14 candidates, 过滤率: 0.00%
+2026-01-20 13:25:54,917 - INFO - 📊 Stage 4 (Graph Prior): 14 candidates
+2026-01-20 13:25:54,917 - INFO -    Final Top 3: ['448041', '3511925', '2601425']
+2026-01-20 13:25:54,917 - INFO - 📊 Final Result: 14 candidates returned
+2026-01-20 13:25:54,917 - INFO - Total Time: 0.739s
+2026-01-20 13:25:55,176 - INFO - 📊 Stage 1 (Recall): 68 candidates, 耗时 0.259s

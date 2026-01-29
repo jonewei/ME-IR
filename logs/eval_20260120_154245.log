@@ -1,0 +1,5 @@
+2026-01-20 15:42:45,293 - INFO - ============================================================
+2026-01-20 15:42:45,293 - INFO - 🚀 Starting Mathematical Expression Retrieval Evaluation
+2026-01-20 15:42:45,293 - INFO - ============================================================
+2026-01-20 15:42:45,297 - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-20 15:42:49,746 - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl

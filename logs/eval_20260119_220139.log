@@ -1,0 +1,15 @@
+2026-01-19 22:01:39,699 - __main__ - INFO - ============================================================
+2026-01-19 22:01:39,699 - __main__ - INFO - 🚀 Starting Evaluation
+2026-01-19 22:01:39,699 - __main__ - INFO - ============================================================
+2026-01-19 22:01:39,699 - __main__ - INFO - 📋 Loading config from experiments/exp_full.yaml
+2026-01-19 22:01:39,703 - __main__ - INFO -    Config loaded: 7 sections
+2026-01-19 22:01:39,703 - __main__ - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-19 22:01:39,703 - __main__ - INFO - ✅ Loaded 5 formulas
+2026-01-19 22:01:39,704 - __main__ - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-19 22:01:39,704 - retrieval.approach0_hash - INFO - 📂 Loaded index from artifacts/approach0_index.pkl (3 buckets, 5 formulas)
+2026-01-19 22:01:39,704 - __main__ - INFO - ✅ Index loaded: 3 hash buckets, 5 formulas
+2026-01-19 22:01:39,704 - __main__ - INFO - 📊 Index statistics:
+2026-01-19 22:01:39,704 - __main__ - INFO -    Total buckets: 3
+2026-01-19 22:01:39,704 - __main__ - INFO -    Avg bucket size: 1.67
+2026-01-19 22:01:39,704 - __main__ - INFO -    Collision rate: 66.67%
+2026-01-19 22:01:39,704 - __main__ - INFO - 🔧 Building search pipeline...

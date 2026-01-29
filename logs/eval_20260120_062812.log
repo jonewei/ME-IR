@@ -1,0 +1,150 @@
+2026-01-20 06:28:12,402 - __main__ - INFO - ============================================================
+2026-01-20 06:28:12,403 - __main__ - INFO - 🚀 Starting Evaluation
+2026-01-20 06:28:12,403 - __main__ - INFO - ============================================================
+2026-01-20 06:28:12,403 - __main__ - INFO - 📋 Loading config from experiments/exp_arqmath3.yaml
+2026-01-20 06:28:12,406 - __main__ - INFO -    Config loaded: 6 sections
+2026-01-20 06:28:12,406 - __main__ - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-20 06:28:20,302 - __main__ - INFO - ✅ Loaded 1132498 formulas
+2026-01-20 06:28:20,420 - __main__ - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-20 06:28:27,472 - retrieval.approach0_hash - INFO - 📂 Loaded index from artifacts/approach0_index.pkl (360146 buckets, 1132498 formulas)
+2026-01-20 06:28:27,486 - __main__ - INFO - ✅ Index loaded: 360146 hash buckets, 1132498 formulas
+2026-01-20 06:28:27,595 - __main__ - INFO - 📊 Index statistics:
+2026-01-20 06:28:27,596 - __main__ - INFO -    Total buckets: 360146
+2026-01-20 06:28:27,596 - __main__ - INFO -    Avg bucket size: 3.14
+2026-01-20 06:28:27,596 - __main__ - INFO -    Collision rate: 15.39%
+2026-01-20 06:28:27,596 - __main__ - INFO - 🔧 Building search pipeline...
+2026-01-20 06:28:31,608 - ranking.feature_builder - INFO -    Features: 20
+2026-01-20 06:28:31,608 - ranking.feature_builder - INFO -    Normalize: False
+2026-01-20 06:28:31,608 - ranking.feature_builder - INFO -    Strict validation: False
+2026-01-20 06:28:31,633 - ranking.lgbm_ranker - INFO - ✅ Loaded LightGBM model from models/lgbm_ranker.txt
+2026-01-20 06:28:31,633 - ranking.lgbm_ranker - INFO -    Model features: 20
+2026-01-20 06:28:31,633 - ranking.lgbm_ranker - INFO -    Model trees: 100
+2026-01-20 06:28:32,793 - filtering.formula_sts_model - INFO - ✅ Loaded STS model: bert-base-uncased
+2026-01-20 06:28:32,793 - filtering.formula_sts_model - INFO -    Device: cuda
+2026-01-20 06:28:32,793 - filtering.formula_sts_model - INFO -    Max length: 256
+2026-01-20 06:28:32,793 - filtering.formula_sts_model - INFO -    Threshold: 0.92
+2026-01-20 06:28:32,793 - filtering.formula_sts_model - INFO -    Model labels: {0: 'LABEL_0', 1: 'LABEL_1'}
+2026-01-20 06:28:32,794 - filtering.formula_sts_model - WARNING - ⚠️  Label mapping mismatch!
+   Expected: {0: 'different', 1: 'similar'}
+   Model config: {0: 'LABEL_0', 1: 'LABEL_1'}
+2026-01-20 06:28:32,794 - __main__ - INFO - 📂 Loading PageRank from artifacts/pagerank.pkl
+2026-01-20 06:28:33,834 - __main__ - INFO - 📊 PageRank stats:
+2026-01-20 06:28:33,852 - __main__ - INFO -    Min: 0.000000
+2026-01-20 06:28:33,870 - __main__ - INFO -    Max: 0.000003
+2026-01-20 06:28:33,882 - __main__ - INFO -    Mean: 0.000001
+2026-01-20 06:28:33,888 - __main__ - INFO - ✅ Pipeline built successfully
+2026-01-20 06:28:33,888 - __main__ - INFO - 📂 Loading queries from data/processed/queries.json
+2026-01-20 06:28:33,889 - __main__ - INFO - ✅ Loaded 100 queries
+2026-01-20 06:28:33,889 - __main__ - INFO - 📊 Query statistics:
+2026-01-20 06:28:33,889 - __main__ - INFO -    Avg length: 37.9 chars
+2026-01-20 06:28:33,889 - __main__ - INFO -    Max length: 114 chars
+2026-01-20 06:28:33,889 - __main__ - INFO - 📂 Loading relevance labels from data/processed/relevance_labels.json
+2026-01-20 06:28:33,895 - __main__ - INFO - ✅ Loaded relevance labels:
+2026-01-20 06:28:33,895 - __main__ - INFO -    Queries: 76
+2026-01-20 06:28:33,895 - __main__ - INFO -    Total relevant pairs: 11538
+2026-01-20 06:28:33,895 - __main__ - INFO -    Avg relevant per query: 151.8
+2026-01-20 06:28:33,895 - __main__ - INFO - 
+============================================================
+2026-01-20 06:28:33,895 - __main__ - INFO - 🔍 Running Evaluation
+2026-01-20 06:28:33,895 - __main__ - INFO - ============================================================
+2026-01-20 06:28:33,896 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\|A\|_2=\sqrt{\rho(A^TA)}'
+   Skeleton: '\|V\|_N=\sqrt{\rho(V^VV)}'
+   Hash: 010cf51fe2f4fa54...
+2026-01-20 06:28:33,896 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-20 06:29:24,148 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 10 formulas from 10 buckets
+2026-01-20 06:29:24,286 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 10 candidates, 耗时 50.390s
+2026-01-20 06:29:24,708 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 10 candidates
+2026-01-20 06:29:24,709 - pipeline.search_pipeline - INFO -    Top 3: ['2784148', '28162054', '2879771']
+2026-01-20 06:29:24,858 - pipeline.search_pipeline - WARNING - Stage 3 过滤后无结果，回退到 Stage 2
+2026-01-20 06:29:24,858 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 10 candidates, 过滤率: 0.00%
+2026-01-20 06:29:24,858 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 10 candidates
+2026-01-20 06:29:24,858 - pipeline.search_pipeline - INFO -    Final Top 3: ['28162054', '2879771', '2784148']
+2026-01-20 06:29:24,859 - pipeline.search_pipeline - INFO - 📊 Final Result: 10 candidates returned
+2026-01-20 06:29:24,859 - pipeline.search_pipeline - INFO - Total Time: 50.962s
+2026-01-20 06:29:24,859 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: 'z=\sqrt[n]{s}e^{\frac{i\varphi}{n}}'
+   Skeleton: 'V=\sqrt[V]{V}V^{\frac{V\varphi}{V}}'
+   Hash: 933537f25090f816...
+2026-01-20 06:29:24,859 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-20 06:30:23,417 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 12 formulas from 10 buckets
+2026-01-20 06:30:23,554 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 12 candidates, 耗时 58.695s
+2026-01-20 06:30:23,727 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 12 candidates
+2026-01-20 06:30:23,727 - pipeline.search_pipeline - INFO -    Top 3: ['9081', '2587619', '109893']
+2026-01-20 06:30:23,870 - pipeline.search_pipeline - WARNING - Stage 3 过滤后无结果，回退到 Stage 2
+2026-01-20 06:30:23,871 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 12 candidates, 过滤率: 0.00%
+2026-01-20 06:30:23,871 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 12 candidates
+2026-01-20 06:30:23,871 - pipeline.search_pipeline - INFO -    Final Top 3: ['9081', '2587619', '109893']
+2026-01-20 06:30:23,871 - pipeline.search_pipeline - INFO - 📊 Final Result: 10 candidates returned
+2026-01-20 06:30:23,871 - pipeline.search_pipeline - INFO - Total Time: 59.011s
+2026-01-20 06:30:23,871 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '[x,y] = x'
+   Skeleton: '[V,V]=V'
+   Hash: a36e2e89390a91f9...
+2026-01-20 06:30:23,872 - retrieval.approach0_hash - INFO - ✅ [Approach0] Exact match: 17 formulas
+2026-01-20 06:30:23,873 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 17 candidates, 耗时 0.001s
+2026-01-20 06:30:24,096 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 17 candidates
+2026-01-20 06:30:24,096 - pipeline.search_pipeline - INFO -    Top 3: ['2671542', '3002712', '2671543']
+2026-01-20 06:30:24,294 - pipeline.search_pipeline - WARNING - Stage 3 过滤后无结果，回退到 Stage 2
+2026-01-20 06:30:24,294 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 17 candidates, 过滤率: 0.00%
+2026-01-20 06:30:24,295 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 17 candidates
+2026-01-20 06:30:24,295 - pipeline.search_pipeline - INFO -    Final Top 3: ['2671543', '2671542', '3002712']
+2026-01-20 06:30:24,295 - pipeline.search_pipeline - INFO - 📊 Final Result: 10 candidates returned
+2026-01-20 06:30:24,295 - pipeline.search_pipeline - INFO - Total Time: 0.423s
+2026-01-20 06:30:24,295 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '[T_X^{0,1}, T_X^{0,1}] \subset T_X^{0,1}'
+   Skeleton: '[V_V^{N,N},V_V^{N,N}]\subsetT_V^{N,N}'
+   Hash: 053f4042ddb41478...
+2026-01-20 06:30:24,295 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-20 06:31:27,672 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 11 formulas from 10 buckets
+2026-01-20 06:31:27,814 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 11 candidates, 耗时 63.519s
+2026-01-20 06:31:27,973 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 11 candidates
+2026-01-20 06:31:27,974 - pipeline.search_pipeline - INFO -    Top 3: ['28301228', '2769190', '2769193']
+2026-01-20 06:31:28,108 - pipeline.search_pipeline - WARNING - Stage 3 过滤后无结果，回退到 Stage 2
+2026-01-20 06:31:28,108 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 11 candidates, 过滤率: 0.00%
+2026-01-20 06:31:28,108 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 11 candidates
+2026-01-20 06:31:28,109 - pipeline.search_pipeline - INFO -    Final Top 3: ['28301228', '2769193', '2769190']
+2026-01-20 06:31:28,109 - pipeline.search_pipeline - INFO - 📊 Final Result: 10 candidates returned
+2026-01-20 06:31:28,109 - pipeline.search_pipeline - INFO - Total Time: 63.813s
+2026-01-20 06:31:28,109 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\lim\limits_{N\to\infty}\left\lfloor\sum\limits_{r'
+   Skeleton: '\lim\limits_{V\to\infty}\left\lfloor\sum\limits_{V'
+   Hash: cf56c7532049ecba...
+2026-01-20 06:31:28,109 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-20 06:33:05,744 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 10 formulas from 10 buckets
+2026-01-20 06:33:05,893 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 10 candidates, 耗时 97.784s
+2026-01-20 06:33:06,046 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 10 candidates
+2026-01-20 06:33:06,046 - pipeline.search_pipeline - INFO -    Top 3: ['16181', '2607871', '28133592']
+2026-01-20 06:33:06,172 - pipeline.search_pipeline - WARNING - Stage 3 过滤后无结果，回退到 Stage 2
+2026-01-20 06:33:06,172 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 10 candidates, 过滤率: 0.00%
+2026-01-20 06:33:06,172 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 10 candidates
+2026-01-20 06:33:06,172 - pipeline.search_pipeline - INFO -    Final Top 3: ['16181', '2607871', '28133592']
+2026-01-20 06:33:06,172 - pipeline.search_pipeline - INFO - 📊 Final Result: 10 candidates returned
+2026-01-20 06:33:06,172 - pipeline.search_pipeline - INFO - Total Time: 98.062s
+2026-01-20 06:33:06,173 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: 'B = \gamma + \sum_p \left\{ \log\left( 1 - \frac 1'
+   Skeleton: 'V=\gamma+\sum_V\left\{\log\left(N-\fracNV\right)+\'
+   Hash: 872c95a660e85b23...
+2026-01-20 06:33:06,173 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-20 06:34:36,117 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 16 formulas from 10 buckets
+2026-01-20 06:34:36,240 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 16 candidates, 耗时 90.067s
+2026-01-20 06:34:36,470 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 16 candidates
+2026-01-20 06:34:36,471 - pipeline.search_pipeline - INFO -    Top 3: ['2921524', '28102726', '2972889']
+2026-01-20 06:34:36,666 - pipeline.search_pipeline - WARNING - Stage 3 过滤后无结果，回退到 Stage 2
+2026-01-20 06:34:36,666 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 16 candidates, 过滤率: 0.00%
+2026-01-20 06:34:36,666 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 16 candidates
+2026-01-20 06:34:36,667 - pipeline.search_pipeline - INFO -    Final Top 3: ['2921524', '28102726', '2972889']
+2026-01-20 06:34:36,667 - pipeline.search_pipeline - INFO - 📊 Final Result: 10 candidates returned
+2026-01-20 06:34:36,667 - pipeline.search_pipeline - INFO - Total Time: 90.493s
+2026-01-20 06:34:36,667 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\operatorname{ord}_n(x)=\lambda(n)'
+   Skeleton: '\operatorname{VVV}_V(V)=\lambda(V)'
+   Hash: 96d9fef9d28a1f0c...
+2026-01-20 06:34:36,667 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-20 06:35:34,754 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 21 formulas from 10 buckets
+2026-01-20 06:35:34,873 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 21 candidates, 耗时 58.207s
+2026-01-20 06:35:35,158 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 21 candidates
+2026-01-20 06:35:35,158 - pipeline.search_pipeline - INFO -    Top 3: ['28135266', '2790297', '2734266']
+2026-01-20 06:35:35,409 - pipeline.search_pipeline - WARNING - Stage 3 过滤后无结果，回退到 Stage 2
+2026-01-20 06:35:35,410 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 21 candidates, 过滤率: 0.00%
+2026-01-20 06:35:35,410 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 21 candidates
+2026-01-20 06:35:35,410 - pipeline.search_pipeline - INFO -    Final Top 3: ['2734266', '28135266', '3040630']
+2026-01-20 06:35:35,410 - pipeline.search_pipeline - INFO - 📊 Final Result: 10 candidates returned
+2026-01-20 06:35:35,410 - pipeline.search_pipeline - INFO - Total Time: 58.742s
+2026-01-20 06:35:35,411 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\zeta(s)=\sum_{n=1}^\infty\frac{1}{n^s}=\frac{1}{\'
+   Skeleton: '\zeta(V)=\sum_{V=N}^\infty\frac{N}{V^V}=\frac{N}{\'
+   Hash: a3f3350f4d4a2f31...
+2026-01-20 06:35:35,411 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval

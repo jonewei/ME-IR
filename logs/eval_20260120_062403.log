@@ -1,0 +1,49 @@
+2026-01-20 06:24:03,368 - __main__ - INFO - ============================================================
+2026-01-20 06:24:03,368 - __main__ - INFO - 🚀 Starting Evaluation
+2026-01-20 06:24:03,368 - __main__ - INFO - ============================================================
+2026-01-20 06:24:03,368 - __main__ - INFO - 📋 Loading config from experiments/exp_arqmath3.yaml
+2026-01-20 06:24:03,372 - __main__ - INFO -    Config loaded: 6 sections
+2026-01-20 06:24:03,372 - __main__ - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-20 06:24:11,466 - __main__ - INFO - ✅ Loaded 1132498 formulas
+2026-01-20 06:24:11,596 - __main__ - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-20 06:24:18,726 - retrieval.approach0_hash - INFO - 📂 Loaded index from artifacts/approach0_index.pkl (360146 buckets, 1132498 formulas)
+2026-01-20 06:24:18,742 - __main__ - INFO - ✅ Index loaded: 360146 hash buckets, 1132498 formulas
+2026-01-20 06:24:18,851 - __main__ - INFO - 📊 Index statistics:
+2026-01-20 06:24:18,852 - __main__ - INFO -    Total buckets: 360146
+2026-01-20 06:24:18,852 - __main__ - INFO -    Avg bucket size: 3.14
+2026-01-20 06:24:18,852 - __main__ - INFO -    Collision rate: 15.39%
+2026-01-20 06:24:18,852 - __main__ - INFO - 🔧 Building search pipeline...
+2026-01-20 06:24:23,702 - ranking.feature_builder - INFO -    Features: 20
+2026-01-20 06:24:23,702 - ranking.feature_builder - INFO -    Normalize: False
+2026-01-20 06:24:23,702 - ranking.feature_builder - INFO -    Strict validation: False
+2026-01-20 06:24:23,720 - ranking.lgbm_ranker - INFO - ✅ Loaded LightGBM model from models/lgbm_ranker.txt
+2026-01-20 06:24:23,720 - ranking.lgbm_ranker - INFO -    Model features: 20
+2026-01-20 06:24:23,720 - ranking.lgbm_ranker - INFO -    Model trees: 100
+2026-01-20 06:24:25,010 - filtering.formula_sts_model - INFO - ✅ Loaded STS model: bert-base-uncased
+2026-01-20 06:24:25,011 - filtering.formula_sts_model - INFO -    Device: cuda
+2026-01-20 06:24:25,011 - filtering.formula_sts_model - INFO -    Max length: 256
+2026-01-20 06:24:25,011 - filtering.formula_sts_model - INFO -    Threshold: 0.92
+2026-01-20 06:24:25,011 - filtering.formula_sts_model - INFO -    Model labels: {0: 'LABEL_0', 1: 'LABEL_1'}
+2026-01-20 06:24:25,011 - filtering.formula_sts_model - WARNING - ⚠️  Label mapping mismatch!
+   Expected: {0: 'different', 1: 'similar'}
+   Model config: {0: 'LABEL_0', 1: 'LABEL_1'}
+2026-01-20 06:24:25,011 - __main__ - INFO - 📂 Loading PageRank from artifacts/pagerank.pkl
+2026-01-20 06:24:26,159 - __main__ - INFO - 📊 PageRank stats:
+2026-01-20 06:24:26,184 - __main__ - INFO -    Min: 0.000000
+2026-01-20 06:24:26,202 - __main__ - INFO -    Max: 0.000003
+2026-01-20 06:24:26,214 - __main__ - INFO -    Mean: 0.000001
+2026-01-20 06:24:26,219 - __main__ - INFO - ✅ Pipeline built successfully
+2026-01-20 06:24:26,219 - __main__ - INFO - 📂 Loading queries from data/processed/queries.json
+2026-01-20 06:24:26,220 - __main__ - INFO - ✅ Loaded 100 queries
+2026-01-20 06:24:26,220 - __main__ - INFO - 📊 Query statistics:
+2026-01-20 06:24:26,220 - __main__ - INFO -    Avg length: 37.9 chars
+2026-01-20 06:24:26,220 - __main__ - INFO -    Max length: 114 chars
+2026-01-20 06:24:26,220 - __main__ - INFO - 📂 Loading relevance labels from data/processed/relevance_labels.json
+2026-01-20 06:24:26,226 - __main__ - INFO - ✅ Loaded relevance labels:
+2026-01-20 06:24:26,226 - __main__ - INFO -    Queries: 76
+2026-01-20 06:24:26,227 - __main__ - INFO -    Total relevant pairs: 11538
+2026-01-20 06:24:26,227 - __main__ - INFO -    Avg relevant per query: 151.8
+2026-01-20 06:24:26,227 - __main__ - INFO - 
+============================================================
+2026-01-20 06:24:26,227 - __main__ - INFO - 🔍 Running Evaluation
+2026-01-20 06:24:26,227 - __main__ - INFO - ============================================================

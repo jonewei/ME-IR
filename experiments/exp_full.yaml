@@ -1,0 +1,38 @@
+# Full pipeline experiment configuration
+
+name: "full_pipeline"
+description: "Complete 4-stage retrieval pipeline with all features"
+
+# Data paths
+data:
+  formulas: "data/processed/formulas.json"
+  queries: "data/processed/queries.json"
+  labels: "data/processed/relevance_labels.json"
+  index: "artifacts/approach0_index.pkl"
+  pagerank: "artifacts/pagerank.pkl"
+
+# Model paths
+# Model paths
+models:
+  mathbert: "bert-base-uncased"  # ✅ 改为标准 BERT
+  ranker: "models/lgbm_ranker.txt"
+  sts: "bert-base-uncased"  # ✅ 同样改为标准 BERT
+
+
+# Pipeline parameters
+pipeline:
+  topk_recall: 1000
+  topk_rank: 100
+  final_k: 10
+  sts_threshold: 0.92
+  derive_alpha: 0.3
+
+# Feature engineering
+features:
+  num_features: 20
+  normalize: false
+
+# Logging
+logging:
+  level: "INFO"
+  save_logs: true

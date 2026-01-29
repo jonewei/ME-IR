@@ -1,0 +1,29 @@
+experiment:
+  name: structural_only
+  description: >
+    Structural recall only. No semantic ranking, no filtering, no graph prior.
+    This serves as the lower-bound baseline.
+
+pipeline:
+  recall:
+    enabled: true
+    topk: 1000
+
+  coarse_rank:
+    enabled: false
+
+  filter:
+    enabled: false
+
+  graph:
+    enabled: false
+
+ranking:
+  use_bert: false
+  use_lgbm: false
+
+evaluation:
+  metrics:
+    - Recall@10
+    - MAP
+    - nDCG@10

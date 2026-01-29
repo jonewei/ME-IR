@@ -1,0 +1,77 @@
+name: "arqmath3_optimized_pipeline"
+description: "ARQMath-3 with all fixes applied"
+
+data:
+  formulas: "data/processed/formulas.json"
+  queries: "data/processed/queries_final.json"  # ✅ Use enhanced queries
+  labels: "data/arqmath3/qrel_task2_2022_official.tsv"
+  index: "artifacts/approach0_index.pkl"
+  pagerank: "artifacts/pagerank.pkl"
+
+models:
+  # ✅ MathBERT for embedding
+  mathbert: "tbs17/MathBERT"  # Math-specialized BERT
+  
+  # ✅ LightGBM ranker
+  ranker: "artifacts/lgbm_ranker.txt"  # Will be trained separately
+  
+  # ✅ STS model options (choose one):
+  # Option 1: Strong general-purpose model (recommended if math models fail)
+  sts: "all-mpnet-base-v2"
+  
+  # Option 2: Math-specialized (if available)
+  # sts: "tbs17/MathBERT"
+  
+  # Option 3: Original (may have low precision for LaTeX)
+  # sts: "math-similarity/Bert-MLM_arXiv-MP-class_zbMath"
+
+pipeline:
+  # ===== Stage 1: Structural Recall =====
+  topk_recall: 2000
+  enable_fuzzy_search: true      # ✅ Enable fuzzy matching
+  fuzzy_max_distance: 2          # ✅ Hamming distance threshold
+  fuzzy_max_buckets: 50          # ✅ Performance limit
+  
+  # ===== Stage 2: Coarse Ranking =====
+  topk_rank: 1000
+  batch_size: 64                 # ✅ Batch encoding for speedup
+  
+  # ===== Stage 3: STS Filtering =====
+  sts_threshold: 0.65            # ✅ Lowered from 0.75
+  use_adaptive_threshold: true   # ✅ Adjust based on query complexity
+  sts_emergency_fallback: true   # ✅ Fallback if pass rate < 5%
+  
+  # ===== Stage 4: Graph Reranking =====
+  derive_alpha: 0.3              # ✅ PageRank weight
+  
+  # ===== Final Output =====
+  final_k: 100                   # ✅ Top-K results for evaluation
+
+features:
+  num_features: 20               # ✅ Full feature set
+  normalize: false               # ✅ Keep original scale for LightGBM
+  
+  # Feature components (for reference)
+  # 1-768: MathBERT embedding
+  # 769: Cosine similarity
+  # 770: Edit distance
+  # 771-790: Structural features
+
+# ===== Evaluation Settings =====
+evaluation:
+  metrics:
+    - "Recall@K"
+    - "MAP"
+    - "nDCG@K"
+  
+  # TREC run output
+  run_id: "math-retrieval-optimized"
+  
+  # Debugging
+  save_intermediate_results: false  # ✅ Set to true to debug each stage
+
+# ===== Performance Tuning =====
+performance:
+  gpu_batch_size: 64
+  cpu_workers: 4
+  index_cache_size: 10000  # ✅ Cache frequent query hashes

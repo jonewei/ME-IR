@@ -1,0 +1,37 @@
+experiment:
+  name: no_graph
+  description: >
+    Full pipeline except graph-aware re-ranking.
+    Used to isolate the contribution of the Formula Concept Graph.
+
+pipeline:
+  recall:
+    enabled: true
+    topk: 1000
+
+  coarse_rank:
+    enabled: true
+    topk: 100
+
+  filter:
+    enabled: true
+    threshold: 0.92
+
+  graph:
+    enabled: false
+
+ranking:
+  use_bert: true
+  use_lgbm: true
+
+features:
+  use_struct_score: true
+  use_bert_similarity: true
+  use_ast_features: true
+  use_graph_degree: true
+
+evaluation:
+  metrics:
+    - Recall@10
+    - MAP
+    - nDCG@10

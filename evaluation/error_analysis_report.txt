@@ -1,0 +1,31 @@
+📊 错误分析报告 (Total Failed: 4)
+================================================================================
+
+❌ Topic ID: B.315
+   [Query LaTeX]: P(m\text{++})\Rightarrow P(m)
+   [Ground Truths]:
+      - ID 41278: /
+      - ID 5766017: \sigma(a)\,\rho\,\sigma(b)
+      - ID 6804134: y^A_\gamma = \begin{cases} x_\gamma, &\text{if }\gamma \in A \\ 0, &\text{otherwise.} \end{cases}
+--------------------------------------------------------------------------------
+❌ Topic ID: B.327
+   [Query LaTeX]: \begin{matrix} 1 &amp; 1 &amp;1 \\ x &amp; y &amp; z \\ x^2 &amp; y^2 &amp;z^2 \\ \end{matrix}
+   [Ground Truths]:
+      - ID 41278: /
+      - ID 4669781: ⚠️ 库中不存在 (Coverage Error)
+      - ID 8079432: ⚠️ 库中不存在 (Coverage Error)
+--------------------------------------------------------------------------------
+❌ Topic ID: B.362
+   [Query LaTeX]: x R y \vee y R x
+   [Ground Truths]:
+      - ID 41278: /
+      - ID 6905308: ⚠️ 库中不存在 (Coverage Error)
+      - ID 2127522: ⚠️ 库中不存在 (Coverage Error)
+--------------------------------------------------------------------------------
+❌ Topic ID: B.388
+   [Query LaTeX]: \leqft[\begin{array}{ccc|c}1&amp;10&amp;-6&amp;1\\1&amp;k&amp;-1&amp;2\\2&amp;-1&amp;k&amp;5\end{array}]
+   [Ground Truths]:
+      - ID 41278: /
+      - ID 8916992: ⚠️ 库中不存在 (Coverage Error)
+      - ID 6759442: \left[ \begin{array}{@{}ccc|c@{}} 1 & -2 & 0 & 2 \\ 0 & 1 & 2 & -2 \\ 5 & -6 & 8 & 6 \\ \end{array} \right]
+--------------------------------------------------------------------------------

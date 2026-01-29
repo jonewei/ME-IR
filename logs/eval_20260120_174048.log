@@ -1,0 +1,60 @@
+2026-01-20 17:40:48,051 - INFO - ============================================================
+2026-01-20 17:40:48,051 - INFO - 🚀 Starting Mathematical Expression Retrieval Evaluation
+2026-01-20 17:40:48,052 - INFO - ============================================================
+2026-01-20 17:40:48,056 - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-20 17:40:52,970 - INFO - ✅ Loaded 1132856 formulas
+2026-01-20 17:40:53,146 - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-20 17:40:54,785 - INFO -    Total buckets: 478910
+2026-01-20 17:40:54,786 - INFO -    Total formulas: 835671
+2026-01-20 17:40:54,786 - INFO - 🔧 Building search pipeline components...
+2026-01-20 17:40:54,827 - INFO - 🔧 Initializing MathBERT Embedder
+2026-01-20 17:40:54,827 - INFO -    Model: bert-base-uncased
+2026-01-20 17:40:54,827 - INFO -    Device: cuda
+2026-01-20 17:40:54,828 - INFO -    Max length: 128
+2026-01-20 17:40:54,828 - INFO -    Batch size: 32
+2026-01-20 17:40:58,706 - INFO -    Features: 20
+2026-01-20 17:40:58,707 - INFO -    Normalize: False
+2026-01-20 17:40:58,707 - INFO -    Strict validation: False
+2026-01-20 17:40:58,726 - INFO - ✅ Loaded LightGBM model from models/lgbm_ranker.txt
+2026-01-20 17:40:58,726 - INFO -    Model features: 20
+2026-01-20 17:40:58,726 - INFO -    Model trees: 100
+2026-01-20 17:40:58,726 - INFO - ✅ Loading STS model: math-similarity/Bert-MLM_arXiv-MP-class_zbMath
+2026-01-20 17:40:58,726 - INFO -    Device: cuda
+2026-01-20 17:40:58,726 - INFO -    Threshold: 0.75
+2026-01-20 17:40:58,729 - INFO - Use pytorch device_name: cuda
+2026-01-20 17:40:58,729 - INFO - Load pretrained SentenceTransformer: math-similarity/Bert-MLM_arXiv-MP-class_zbMath
+2026-01-20 17:41:04,998 - INFO - ✅ SearchPipeline initialized:
+2026-01-20 17:41:04,998 - INFO -    Recall: 2000, Rank: 1000, Final: 100
+2026-01-20 17:41:04,998 - INFO -    Alpha: 0.3
+2026-01-20 17:41:04,999 - INFO - 📂 Loading full queries (with MathML) from data/processed/queries_full.json
+2026-01-20 17:41:04,999 - INFO - ⚠️  TEST MODE: Processing only first 5 queries.
+2026-01-20 17:41:05,000 - INFO - 📂 Loading qrel labels from data/arqmath3/qrel_task2_2022_official.tsv
+2026-01-20 17:41:05,016 - INFO - ✅ Loaded 76 queries with relevance labels
+2026-01-20 17:41:05,016 - INFO -    Total relevance judgments: 11538
+2026-01-20 17:41:05,016 - INFO - 
+------------------------------
+2026-01-20 17:41:05,016 - INFO - 🔍 EVALUATION IN PROGRESS
+2026-01-20 17:41:05,016 - INFO - ------------------------------
+2026-01-20 17:41:05,019 - INFO - 🔍 [StructuralRecall] Query: A.301 - Retrieved 0 candidates in 0.0009s
+2026-01-20 17:41:05,019 - WARNING - ⚠️  Stage 1 recalled 0 results for query: \begin{align*} \frac{1}{\sqrt{n}}\|A\|_{\infty}\leq \|A\|_2\leq\sqrt{m}\|A\|_{\infty}\\ \frac{1}{\sqrt{m}}\|A\|_{1}\leq \|A\|_2\leq\sqrt{n}\|A\|_{1} \end{align*}
+2026-01-20 17:41:05,020 - INFO - 🔍 [StructuralRecall] Query: A.302 - Retrieved 0 candidates in 0.0001s
+2026-01-20 17:41:05,020 - WARNING - ⚠️  Stage 1 recalled 0 results for query: z=\sqrt[n]{s}e^{\frac{i\varphi}{n}}
+2026-01-20 17:41:05,020 - INFO - 🔍 [StructuralRecall] Query: A.303 - Retrieved 0 candidates in 0.0001s
+2026-01-20 17:41:05,020 - WARNING - ⚠️  Stage 1 recalled 0 results for query: [x,[y,z]]+[y,[z,x]]+[z,[x,y]]=0
+2026-01-20 17:41:05,020 - INFO - 🔍 [StructuralRecall] Query: A.304 - Retrieved 0 candidates in 0.0001s
+2026-01-20 17:41:05,021 - WARNING - ⚠️  Stage 1 recalled 0 results for query: [T_X^{0,1}, T_X^{0,1}] \subset T_X^{0,1}
+2026-01-20 17:41:05,021 - INFO - 🔍 [StructuralRecall] Query: A.305 - Retrieved 0 candidates in 0.0001s
+2026-01-20 17:41:05,021 - WARNING - ⚠️  Stage 1 recalled 0 results for query: \lim\limits_{N\to\infty}\left\lfloor\sum\limits_{r=1}^N\frac{1}{2^r}\right\rfloor
+2026-01-20 17:41:05,021 - WARNING - ⚠️  5 queries have no ground truth labels
+2026-01-20 17:41:05,022 - INFO - 📊 Evaluated 0 queries
+2026-01-20 17:41:05,023 - INFO - 💾 TREC run saved to results/20260120_174105/run.trec
+2026-01-20 17:41:05,025 - INFO - 
+============================================================
+2026-01-20 17:41:05,026 - INFO - ✅ Evaluation Complete!
+2026-01-20 17:41:05,026 - INFO - 📊 Results directory: results/20260120_174105
+2026-01-20 17:41:05,026 - INFO - 📈 Metrics:
+2026-01-20 17:41:05,026 - INFO -    Recall@K: 0.0000
+2026-01-20 17:41:05,026 - INFO -    MAP: 0.0000
+2026-01-20 17:41:05,026 - INFO -    nDCG@K: 0.0000
+2026-01-20 17:41:05,026 - INFO -    num_evaluated_queries: 0
+2026-01-20 17:41:05,026 - INFO - ============================================================

@@ -1,0 +1,11 @@
+2026-01-20 13:47:59,547 - INFO - ============================================================
+2026-01-20 13:47:59,548 - INFO - 🚀 Starting Mathematical Expression Retrieval Evaluation
+2026-01-20 13:47:59,548 - INFO - ============================================================
+2026-01-20 13:47:59,551 - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-20 13:48:02,894 - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-20 13:48:06,234 - INFO - 📂 Loaded index from artifacts/approach0_index.pkl (277815 buckets, 455241 formulas)
+2026-01-20 13:48:06,244 - INFO - 🔧 Building search pipeline components...
+2026-01-20 13:48:10,531 - INFO -    Features: 20
+2026-01-20 13:48:10,531 - INFO -    Normalize: False
+2026-01-20 13:48:10,531 - INFO -    Strict validation: False
+2026-01-20 13:48:10,532 - ERROR - ❌ Failed to load model: Could not open models/lgbm_ranker.txt

@@ -1,0 +1,60 @@
+2026-01-20 10:12:56,237 - INFO - ============================================================
+2026-01-20 10:12:56,237 - INFO - 🚀 Starting Mathematical Expression Retrieval Evaluation
+2026-01-20 10:12:56,238 - INFO - ============================================================
+2026-01-20 10:12:56,241 - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-20 10:13:04,304 - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-20 10:13:11,492 - INFO - 📂 Loaded index from artifacts/approach0_index.pkl (360146 buckets, 1132498 formulas)
+2026-01-20 10:13:11,506 - INFO - 🔧 Building search pipeline components...
+2026-01-20 10:13:16,322 - INFO -    Features: 20
+2026-01-20 10:13:16,322 - INFO -    Normalize: False
+2026-01-20 10:13:16,322 - INFO -    Strict validation: False
+2026-01-20 10:13:16,337 - INFO - ✅ Loaded LightGBM model from models/lgbm_ranker.txt
+2026-01-20 10:13:16,337 - INFO -    Model features: 20
+2026-01-20 10:13:16,337 - INFO -    Model trees: 100
+2026-01-20 10:13:16,337 - INFO - ✅ Loading STS model: math-similarity/Bert-MLM_arXiv-MP-class_zbMath
+2026-01-20 10:13:16,338 - INFO -    Device: cuda
+2026-01-20 10:13:16,338 - INFO -    Threshold: 0.85
+2026-01-20 10:13:16,342 - INFO - Use pytorch device_name: cuda
+2026-01-20 10:13:16,342 - INFO - Load pretrained SentenceTransformer: math-similarity/Bert-MLM_arXiv-MP-class_zbMath
+2026-01-20 10:13:21,891 - INFO - ⚠️  TEST MODE: Processing only first 2 queries.
+2026-01-20 10:13:21,897 - INFO - 
+------------------------------
+2026-01-20 10:13:21,897 - INFO - 🔍 EVALUATION IN PROGRESS
+2026-01-20 10:13:21,897 - INFO - ------------------------------
+2026-01-20 10:13:21,899 - INFO - 🔍 [Approach0] Query: '\|A\|_2=\sqrt{\rho(A^TA)}'
+   Skeleton: '\|V\|_N=\sqrt{\rho(V^VV)}'
+   Hash: 010cf51fe2f4fa54...
+2026-01-20 10:13:21,899 - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-20 10:14:12,434 - INFO - ✅ [Approach0] Fuzzy match: 10 formulas from 10 buckets
+2026-01-20 10:14:12,573 - INFO - 📊 Stage 1 (Recall): 10 candidates, 耗时 50.675s
+2026-01-20 10:14:12,988 - INFO - 📊 Stage 2 (Coarse Rank): 10 candidates
+2026-01-20 10:14:12,988 - INFO -    Top 3: ['2784148', '28162054', '2879771']
+2026-01-20 10:14:12,988 - INFO - 🔍 Applying STS filter (threshold=0.85) to 10 candidates
+2026-01-20 10:14:13,438 - INFO - 📊 STS filtered: 10 remaining (过滤率: 0.0%)
+2026-01-20 10:14:13,438 - INFO - 📊 Stage 3 (Filtering): 10 candidates, 过滤率: 0.00%
+2026-01-20 10:14:13,438 - INFO - 📊 Stage 4 (Graph Prior): 10 candidates
+2026-01-20 10:14:13,438 - INFO -    Final Top 3: ['28162054', '2879771', '2784148']
+2026-01-20 10:14:13,439 - INFO - 📊 Final Result: 10 candidates returned
+2026-01-20 10:14:13,439 - INFO - Total Time: 51.539s
+2026-01-20 10:14:13,439 - INFO - 🔍 [Approach0] Query: 'z=\sqrt[n]{s}e^{\frac{i\varphi}{n}}'
+   Skeleton: 'V=\sqrt[V]{V}V^{\frac{V\varphi}{V}}'
+   Hash: 933537f25090f816...
+2026-01-20 10:14:13,439 - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-20 10:15:12,021 - INFO - ✅ [Approach0] Fuzzy match: 12 formulas from 10 buckets
+2026-01-20 10:15:12,156 - INFO - 📊 Stage 1 (Recall): 12 candidates, 耗时 58.717s
+2026-01-20 10:15:12,356 - INFO - 📊 Stage 2 (Coarse Rank): 12 candidates
+2026-01-20 10:15:12,356 - INFO -    Top 3: ['9081', '2587619', '109893']
+2026-01-20 10:15:12,356 - INFO - 🔍 Applying STS filter (threshold=0.85) to 12 candidates
+2026-01-20 10:15:12,855 - INFO - 📊 STS filtered: 7 remaining (过滤率: 41.7%)
+2026-01-20 10:15:12,855 - INFO - 📊 Stage 3 (Filtering): 7 candidates, 过滤率: 41.67%
+2026-01-20 10:15:12,855 - INFO - 📊 Stage 4 (Graph Prior): 7 candidates
+2026-01-20 10:15:12,855 - INFO -    Final Top 3: ['9081', '2688455', '28194019']
+2026-01-20 10:15:12,855 - INFO - 📊 Final Result: 7 candidates returned
+2026-01-20 10:15:12,855 - INFO - Total Time: 59.415s
+2026-01-20 10:15:12,858 - INFO - 💾 TREC run saved to results/20260120_101512/run.trec
+2026-01-20 10:15:12,860 - INFO - 
+============================================================
+2026-01-20 10:15:12,860 - INFO - ✅ Evaluation Complete!
+2026-01-20 10:15:12,860 - INFO - 📊 Results directory: results/20260120_101512
+2026-01-20 10:15:12,860 - INFO - 📈  Metrics: {'Recall@K': 0.0, 'MAP': 0.0, 'nDCG@K': 0.0}
+2026-01-20 10:15:12,860 - INFO - ============================================================

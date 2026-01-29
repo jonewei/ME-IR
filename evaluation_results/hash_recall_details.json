@@ -1,0 +1,617 @@
+{
+  "summary": {
+    "mean_recall": 0.0,
+    "num_queries": 76,
+    "top_k": 10000
+  },
+  "details": [
+    {
+      "topic_id": "B.301",
+      "query": "\\|a\\|_2=\\sqrt{\\rho(a^ta)}",
+      "gt_count": 123,
+      "retrieved_count": 3,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.302",
+      "query": "z=\\sqrt[n]{s}e^{\\frac{i\\varphi}{n}}",
+      "gt_count": 137,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.303",
+      "query": "[x,y] = x",
+      "gt_count": 154,
+      "retrieved_count": 16,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.304",
+      "query": "[t_x^{0,1}, t_x^{0,1}] \\subset t_x^{0,1}",
+      "gt_count": 178,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.305",
+      "query": "\\lim\\limits_{n\\to\\infty}\\lfloor\\sum\\limits_{r=1}^n\\frac{1}{2^r}\\rfloor",
+      "gt_count": 183,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.308",
+      "query": "\\zeta(s)=\\sum_{n=1}^\\infty\\frac{1}{n^s}=\\frac{1}{\\gamma(s)}\\int_0^\\infty \\frac{x^{s-1}}{e^x-1}dx",
+      "gt_count": 130,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.310",
+      "query": "\\frac{4}{x}+\\frac{10}{y}=1",
+      "gt_count": 153,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.311",
+      "query": "f(x)=\\frac{9^{x}}{9^x+3}",
+      "gt_count": 141,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.312",
+      "query": "\\lfloor \\frac{\\lfloor a/b \\rfloor}{c} \\rfloor=\\lfloor\\frac{a}{bc}\\rfloor",
+      "gt_count": 132,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.313",
+      "query": "|ab|=rs",
+      "gt_count": 163,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.314",
+      "query": "\\sum \\|e_n-x_n\\| &lt; 1",
+      "gt_count": 165,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.315",
+      "query": "p(m\\text{++})\\implies p(m)",
+      "gt_count": 152,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.317",
+      "query": "\\int \\frac{1}{(x^2+1)^n}dx",
+      "gt_count": 158,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.318",
+      "query": "e^{x} \\geq (1+\\frac{x}{n})^{n}",
+      "gt_count": 152,
+      "retrieved_count": 1,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.319",
+      "query": "a_1 \\subseteq a_2 \\subseteq \\ldots \\subseteq a_n \\subseteq a_{n+1} \\subseteq \\ldots",
+      "gt_count": 140,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.320",
+      "query": "\\int_{0}^{1}\\frac{\\sin^{-1}(x)}{x}",
+      "gt_count": 151,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.321",
+      "query": "ax+by=d",
+      "gt_count": 156,
+      "retrieved_count": 58,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.322",
+      "query": "a_n=\\frac{n(n+1)}{2}",
+      "gt_count": 125,
+      "retrieved_count": 2,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.323",
+      "query": "(\\mathbb{r} [x]/(x^4 + 1))^*",
+      "gt_count": 180,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.324",
+      "query": "\\sum_{n=1}^{\\infty} \\sum_{m=1}^\\infty \\frac{1}{{n^2 +m^2}}.",
+      "gt_count": 127,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.325",
+      "query": "n!+2, n! +3, ..., n! + n",
+      "gt_count": 107,
+      "retrieved_count": 4,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.326",
+      "query": "f=p \\oplus t",
+      "gt_count": 131,
+      "retrieved_count": 1,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.327",
+      "query": "\\begin{vmatrix} 1 &amp; 1 &amp;1 \\\\ x &amp; y &amp; z \\\\ x^2 &amp; y^2 &amp;z^2 \\\\ \\end{vmatrix}",
+      "gt_count": 192,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.328",
+      "query": "\\sum_{k=1}^{n}\\cos\\frac{2\\pi k}{n}=0",
+      "gt_count": 128,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.329",
+      "query": "a \\subseteq v \\subseteq \\overline{v} \\subseteq u",
+      "gt_count": 131,
+      "retrieved_count": 1,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.330",
+      "query": "\\delta=[x+a(n-1)](x-a)^{n-1}",
+      "gt_count": 152,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.331",
+      "query": "4^x+6^x=9^x",
+      "gt_count": 114,
+      "retrieved_count": 2,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.333",
+      "query": "\\frac{\\sqrt{1-p^2}}{2\\pi(1-2p\\sin(\\varphi)\\cos(\\varphi))}",
+      "gt_count": 205,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.334",
+      "query": "a^{log_a(b)}=b",
+      "gt_count": 143,
+      "retrieved_count": 1,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.338",
+      "query": "y = \\frac{a+bx}{b-x}",
+      "gt_count": 164,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.341",
+      "query": "\\{a, a+b, a+2b, \\timess\\}",
+      "gt_count": 133,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.342",
+      "query": "f(x_4) =\\frac{2}{5}e^{\\frac{-x}{10}}(1-e^{\\frac{-x}{10}})^3.",
+      "gt_count": 174,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.343",
+      "query": "p(e) = 1/6",
+      "gt_count": 129,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.344",
+      "query": "\\mathcal{a}=\\{\\{a\\}\\}",
+      "gt_count": 153,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.345",
+      "query": "r\\equiv \\begin{cases} x=1 \\\\ y=1 \\\\z=\\lambda -2 \\end{cases}",
+      "gt_count": 183,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.347",
+      "query": "(a+b, a-b) = 1",
+      "gt_count": 129,
+      "retrieved_count": 3,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.348",
+      "query": "\\begin{pmatrix} a &amp; -b\\\\ b &amp; a \\end{pmatrix}",
+      "gt_count": 186,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.349",
+      "query": "x! = \\sqrt{2\\pi x} * (\\frac{x}{e})^x",
+      "gt_count": 122,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.350",
+      "query": "x^3 - x, x \\in \\mathbb{n}",
+      "gt_count": 175,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.351",
+      "query": "\\lim_{n\\to\\infty}\\inf \\mu (a_n) \\geq \\mu(a)",
+      "gt_count": 152,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.352",
+      "query": "\\int_0^\\infty f(x) dx",
+      "gt_count": 158,
+      "retrieved_count": 38,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.353",
+      "query": "cov(x,y) = 0",
+      "gt_count": 155,
+      "retrieved_count": 44,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.354",
+      "query": "p_1p_2\\mid a",
+      "gt_count": 155,
+      "retrieved_count": 2,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.355",
+      "query": "f(f(x)^2+f(y))=xf(x)+y",
+      "gt_count": 159,
+      "retrieved_count": 4,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.357",
+      "query": "f(n)=n^2-n+2",
+      "gt_count": 149,
+      "retrieved_count": 1,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.358",
+      "query": "ds = \\sqrt{1 + \\frac{dy}{dx}^2}",
+      "gt_count": 151,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.359",
+      "query": "\\tan\\theta=\\frac{x}{2}",
+      "gt_count": 131,
+      "retrieved_count": 3,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.360",
+      "query": "1/ \\vert x \\vert",
+      "gt_count": 155,
+      "retrieved_count": 1,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.361",
+      "query": "f(x)=\\int_a^xf(t)dt",
+      "gt_count": 145,
+      "retrieved_count": 76,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.362",
+      "query": "x r y \\lor y r x",
+      "gt_count": 138,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.363",
+      "query": "p[x^* \\geq x | \\mathcal{f}_0]= 1 \\wedge x_0 / x",
+      "gt_count": 189,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.364",
+      "query": "d(x,a)\\leqslant d(x,y)+d(y,a)",
+      "gt_count": 136,
+      "retrieved_count": 4,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.365",
+      "query": "\\alpha^+",
+      "gt_count": 171,
+      "retrieved_count": 28,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.366",
+      "query": "s=\\{ e_1,e_2,e_3,....,e_n\\}",
+      "gt_count": 163,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.367",
+      "query": "d(x,m)=\\frac{|\\langle f,x \\rangle|}{\\|f\\|}",
+      "gt_count": 169,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.368",
+      "query": "\\sum_{n\\geq1}\\frac{1}{n^2}=\\sum_{n\\leq x}\\frac1{n^2}+\\mathcal o(1/x).",
+      "gt_count": 164,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.369",
+      "query": "j_n=\\int_{-\\pi}^\\pi \\frac{\\sin{(nx)}}{(1+2^n) \\sin{x}}\\,\\mathrm{d}x\\:?",
+      "gt_count": 146,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.370",
+      "query": "s(x) = \\sum\\limits_{j=1}^n c_j\\chi_{a_j}(x)",
+      "gt_count": 131,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.376",
+      "query": "\\lim\\limits_{n\\to\\infty}\\frac{\\sqrt1+\\sqrt2+\\sqrt3+\\ldots+\\sqrt n}{n\\sqrt n}",
+      "gt_count": 112,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.377",
+      "query": "\\mathbb{r}^{n+1}-\\mathbb{r}^n",
+      "gt_count": 161,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.380",
+      "query": "\\int_0^\\pi f(t) \\sin(t)dt =\\int_0^\\pi f(t) \\cos(t)dt = 0",
+      "gt_count": 167,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.381",
+      "query": "a_1 \\times ... \\times a_n",
+      "gt_count": 144,
+      "retrieved_count": 2,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.384",
+      "query": "f_3(n) = \\binom n2",
+      "gt_count": 155,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.386",
+      "query": "\\sum _{n=-\\infty }^{\\infty } e^{-n^2 \\pi x}=\\frac{1}{\\sqrt{x}}\\sum _{n=-\\infty }^{\\infty } e^{-\\frac",
+      "gt_count": 142,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.388",
+      "query": "[\\begin{array}{ccc|c}1&amp;10&amp;-6&amp;1\\\\1&amp;k&amp;-1&amp;2\\\\2&amp;-1&amp;k&amp;5\\end{array}]",
+      "gt_count": 192,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.389",
+      "query": "\\frac{(1+r)^{n+1}-(1+r)-rn}{r^2(1+r)^n}",
+      "gt_count": 180,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.390",
+      "query": "t_n:=\\frac {x_1+x_2+...+x_n}{n}",
+      "gt_count": 147,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.391",
+      "query": "\\mathbb{e} |x+y|^r \\leq c_r (\\mathbb{e} |x|^r + \\mathbb{e} |y|^r),",
+      "gt_count": 173,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.393",
+      "query": "|f(z^{2})| \\leq 2|f(z)|",
+      "gt_count": 148,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.394",
+      "query": "\\forall \\epsilon &gt; 0, \\exists \\delta &gt; 0, |x-a|&lt;\\delta \\implies |f(x) - f(a)| &lt; \\epsilon",
+      "gt_count": 155,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.395",
+      "query": "f(a+b) = f(a) + f(b)",
+      "gt_count": 145,
+      "retrieved_count": 94,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.396",
+      "query": "f_x(x)=\\frac{2x}{\\theta^2} \\quad",
+      "gt_count": 138,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.397",
+      "query": "1 + 2 + 3 + 4 + \\timess = -\\frac{1}{12}",
+      "gt_count": 125,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.398",
+      "query": "\\lim_{x arrow c} f'(x) = l = \\lim_{x arrow c^+} f'(x) =\\lim_{x arrow c^-} f'(x)",
+      "gt_count": 160,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.399",
+      "query": "m = {\\{\\langle x,y \\rangle \\in \\mathbb{r^2} | a \\leq x \\leq b , c \\leq y \\leq d}\\}",
+      "gt_count": 156,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    },
+    {
+      "topic_id": "B.400",
+      "query": "(\\frac{1}{2^{n-2}})^2",
+      "gt_count": 170,
+      "retrieved_count": 0,
+      "hits": 0,
+      "recall": 0.0
+    }
+  ]
+}

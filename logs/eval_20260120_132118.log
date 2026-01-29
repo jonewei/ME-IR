@@ -1,0 +1,18 @@
+2026-01-20 13:21:18,370 - INFO - ============================================================
+2026-01-20 13:21:18,370 - INFO - 🚀 Starting Mathematical Expression Retrieval Evaluation
+2026-01-20 13:21:18,370 - INFO - ============================================================
+2026-01-20 13:21:18,374 - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-20 13:21:21,634 - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-20 13:21:24,989 - INFO - 📂 Loaded index from artifacts/approach0_index.pkl (277815 buckets, 455241 formulas)
+2026-01-20 13:21:25,000 - INFO - 🔧 Building search pipeline components...
+2026-01-20 13:21:29,726 - INFO -    Features: 20
+2026-01-20 13:21:29,726 - INFO -    Normalize: False
+2026-01-20 13:21:29,726 - INFO -    Strict validation: False
+2026-01-20 13:21:29,748 - INFO - ✅ Loaded LightGBM model from models/lgbm_ranker.txt
+2026-01-20 13:21:29,749 - INFO -    Model features: 20
+2026-01-20 13:21:29,749 - INFO -    Model trees: 100
+2026-01-20 13:21:29,749 - INFO - ✅ Loading STS model: math-similarity/Bert-MLM_arXiv-MP-class_zbMath
+2026-01-20 13:21:29,749 - INFO -    Device: cuda
+2026-01-20 13:21:29,749 - INFO -    Threshold: 0.6
+2026-01-20 13:21:29,751 - INFO - Use pytorch device_name: cuda
+2026-01-20 13:21:29,752 - INFO - Load pretrained SentenceTransformer: math-similarity/Bert-MLM_arXiv-MP-class_zbMath

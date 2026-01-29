@@ -1,0 +1,321 @@
+2026-01-19 22:16:14,846 - __main__ - INFO - ============================================================
+2026-01-19 22:16:14,846 - __main__ - INFO - 🚀 Starting Evaluation
+2026-01-19 22:16:14,846 - __main__ - INFO - ============================================================
+2026-01-19 22:16:14,846 - __main__ - INFO - 📋 Loading config from experiments/exp_full.yaml
+2026-01-19 22:16:14,850 - __main__ - INFO -    Config loaded: 7 sections
+2026-01-19 22:16:14,850 - __main__ - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-19 22:16:14,851 - __main__ - INFO - ✅ Loaded 5 formulas
+2026-01-19 22:16:14,851 - __main__ - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-19 22:16:14,851 - retrieval.approach0_hash - INFO - 📂 Loaded index from artifacts/approach0_index.pkl (3 buckets, 5 formulas)
+2026-01-19 22:16:14,851 - __main__ - INFO - ✅ Index loaded: 3 hash buckets, 5 formulas
+2026-01-19 22:16:14,851 - __main__ - INFO - 📊 Index statistics:
+2026-01-19 22:16:14,851 - __main__ - INFO -    Total buckets: 3
+2026-01-19 22:16:14,851 - __main__ - INFO -    Avg bucket size: 1.67
+2026-01-19 22:16:14,851 - __main__ - INFO -    Collision rate: 66.67%
+2026-01-19 22:16:14,851 - __main__ - INFO - 🔧 Building search pipeline...
+2026-01-19 22:16:19,552 - ranking.feature_builder - INFO -    Features: 20
+2026-01-19 22:16:19,552 - ranking.feature_builder - INFO -    Normalize: False
+2026-01-19 22:16:19,552 - ranking.feature_builder - INFO -    Strict validation: False
+2026-01-19 22:16:19,573 - ranking.lgbm_ranker - INFO - ✅ Loaded LightGBM model from models/lgbm_ranker.txt
+2026-01-19 22:16:19,573 - ranking.lgbm_ranker - INFO -    Model features: 20
+2026-01-19 22:16:19,573 - ranking.lgbm_ranker - INFO -    Model trees: 100
+2026-01-19 22:16:21,264 - filtering.formula_sts_model - INFO - ✅ Loaded STS model: bert-base-uncased
+2026-01-19 22:16:21,264 - filtering.formula_sts_model - INFO -    Device: cuda
+2026-01-19 22:16:21,265 - filtering.formula_sts_model - INFO -    Max length: 256
+2026-01-19 22:16:21,265 - filtering.formula_sts_model - INFO -    Threshold: 0.92
+2026-01-19 22:16:21,265 - filtering.formula_sts_model - INFO -    Model labels: {0: 'LABEL_0', 1: 'LABEL_1'}
+2026-01-19 22:16:21,265 - filtering.formula_sts_model - WARNING - ⚠️  Label mapping mismatch!
+   Expected: {0: 'different', 1: 'similar'}
+   Model config: {0: 'LABEL_0', 1: 'LABEL_1'}
+2026-01-19 22:16:21,265 - __main__ - INFO - 📂 Loading PageRank from artifacts/pagerank.pkl
+2026-01-19 22:16:21,265 - __main__ - INFO - 📊 PageRank stats:
+2026-01-19 22:16:21,265 - __main__ - INFO -    Min: 0.064191
+2026-01-19 22:16:21,265 - __main__ - INFO -    Max: 0.387002
+2026-01-19 22:16:21,265 - __main__ - INFO -    Mean: 0.200000
+2026-01-19 22:16:21,266 - __main__ - INFO - ✅ Pipeline built successfully
+2026-01-19 22:16:21,266 - __main__ - INFO - 📂 Loading queries from data/processed/queries.json
+2026-01-19 22:16:21,266 - __main__ - INFO - ✅ Loaded 20 queries
+2026-01-19 22:16:21,266 - __main__ - INFO - 📊 Query statistics:
+2026-01-19 22:16:21,266 - __main__ - INFO -    Avg length: 17.2 chars
+2026-01-19 22:16:21,266 - __main__ - INFO -    Max length: 31 chars
+2026-01-19 22:16:21,266 - __main__ - INFO - 📂 Loading relevance labels from data/processed/relevance_labels.json
+2026-01-19 22:16:21,266 - __main__ - INFO - ✅ Loaded relevance labels:
+2026-01-19 22:16:21,266 - __main__ - INFO -    Queries: 20
+2026-01-19 22:16:21,267 - __main__ - INFO -    Total relevant pairs: 100
+2026-01-19 22:16:21,267 - __main__ - INFO -    Avg relevant per query: 5.0
+2026-01-19 22:16:21,267 - __main__ - INFO - 
+============================================================
+2026-01-19 22:16:21,267 - __main__ - INFO - 🔍 Running Evaluation
+2026-01-19 22:16:21,267 - __main__ - INFO - ============================================================
+2026-01-19 22:16:21,267 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: 'x^2 + y^2'
+   Skeleton: 'V^N+V^N'
+   Hash: 1b9dae9a97c65569...
+2026-01-19 22:16:21,268 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:21,268 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:21,268 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:21,650 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:21,650 - pipeline.search_pipeline - INFO -    Top 3: ['f0', 'f4', 'f2']
+2026-01-19 22:16:21,650 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:21,650 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:21,650 - pipeline.search_pipeline - INFO -    Final Top 3: ['f0', 'f4', 'f2']
+2026-01-19 22:16:21,650 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:21,650 - pipeline.search_pipeline - INFO - Total Time: 0.383s
+2026-01-19 22:16:21,651 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: 'E = mc^2'
+   Skeleton: 'V=VV^N'
+   Hash: 47158d5bb111bbaa...
+2026-01-19 22:16:21,651 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:21,651 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:21,651 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:21,740 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:21,741 - pipeline.search_pipeline - INFO -    Top 3: ['f1', 'f2', 'f4']
+2026-01-19 22:16:21,741 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:21,741 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:21,741 - pipeline.search_pipeline - INFO -    Final Top 3: ['f1', 'f2', 'f4']
+2026-01-19 22:16:21,741 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:21,741 - pipeline.search_pipeline - INFO - Total Time: 0.090s
+2026-01-19 22:16:21,741 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: 'a^2 + b^2 = c^2'
+   Skeleton: 'V^N+V^N=V^N'
+   Hash: 59a4cfcd1b44d900...
+2026-01-19 22:16:21,742 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:21,742 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:21,742 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:21,836 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:21,836 - pipeline.search_pipeline - INFO -    Top 3: ['f2', 'f1', 'f0']
+2026-01-19 22:16:21,836 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:21,836 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:21,836 - pipeline.search_pipeline - INFO -    Final Top 3: ['f2', 'f1', 'f0']
+2026-01-19 22:16:21,836 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:21,837 - pipeline.search_pipeline - INFO - Total Time: 0.094s
+2026-01-19 22:16:21,837 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\int_0^1 x^2 \, dx'
+   Skeleton: '\int_N^NV^N\,VV'
+   Hash: 693bdc44acae5c46...
+2026-01-19 22:16:21,837 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:21,837 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:21,838 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:21,930 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:21,930 - pipeline.search_pipeline - INFO -    Top 3: ['f3', 'f4', 'f0']
+2026-01-19 22:16:21,930 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:21,930 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:21,930 - pipeline.search_pipeline - INFO -    Final Top 3: ['f3', 'f4', 'f0']
+2026-01-19 22:16:21,930 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:21,931 - pipeline.search_pipeline - INFO - Total Time: 0.093s
+2026-01-19 22:16:21,931 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\frac{d}{dx} x^3'
+   Skeleton: '\frac{V}{VV}V^N'
+   Hash: 35ffa41b11380eb2...
+2026-01-19 22:16:21,931 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:21,932 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:21,932 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,021 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,021 - pipeline.search_pipeline - INFO -    Top 3: ['f4', 'f1', 'f0']
+2026-01-19 22:16:22,021 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,022 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,022 - pipeline.search_pipeline - INFO -    Final Top 3: ['f4', 'f1', 'f0']
+2026-01-19 22:16:22,022 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,022 - pipeline.search_pipeline - INFO - Total Time: 0.090s
+2026-01-19 22:16:22,022 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\sum_{i=1}^n i'
+   Skeleton: '\sum_{V=N}^VV'
+   Hash: 541bd7cf4832a79b...
+2026-01-19 22:16:22,022 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,023 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,023 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,118 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,118 - pipeline.search_pipeline - INFO -    Top 3: ['f0', 'f4', 'f1']
+2026-01-19 22:16:22,118 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,118 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,118 - pipeline.search_pipeline - INFO -    Final Top 3: ['f0', 'f4', 'f1']
+2026-01-19 22:16:22,118 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,118 - pipeline.search_pipeline - INFO - Total Time: 0.096s
+2026-01-19 22:16:22,119 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\lim_{x \to 0} \frac{\sin x}{x}'
+   Skeleton: '\lim_{V\toN}\frac{\sinx}{V}'
+   Hash: d7489cea524bae2e...
+2026-01-19 22:16:22,119 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,120 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,120 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,226 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,226 - pipeline.search_pipeline - INFO -    Top 3: ['f2', 'f4', 'f1']
+2026-01-19 22:16:22,226 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,226 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,226 - pipeline.search_pipeline - INFO -    Final Top 3: ['f2', 'f4', 'f1']
+2026-01-19 22:16:22,226 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,226 - pipeline.search_pipeline - INFO - Total Time: 0.107s
+2026-01-19 22:16:22,227 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\nabla \cdot \vec{E}'
+   Skeleton: '\nabla\cdot\vec{V}'
+   Hash: ea36681759c188b7...
+2026-01-19 22:16:22,227 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,227 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,227 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,307 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,307 - pipeline.search_pipeline - INFO -    Top 3: ['f4', 'f1', 'f0']
+2026-01-19 22:16:22,307 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,307 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,307 - pipeline.search_pipeline - INFO -    Final Top 3: ['f4', 'f1', 'f0']
+2026-01-19 22:16:22,307 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,307 - pipeline.search_pipeline - INFO - Total Time: 0.080s
+2026-01-19 22:16:22,308 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\alpha^2 + \beta^2'
+   Skeleton: '\alpha^N+\beta^N'
+   Hash: c77ca2e79dab80e3...
+2026-01-19 22:16:22,308 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,308 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,309 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,384 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,385 - pipeline.search_pipeline - INFO -    Top 3: ['f2', 'f0', 'f1']
+2026-01-19 22:16:22,385 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,385 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,385 - pipeline.search_pipeline - INFO -    Final Top 3: ['f2', 'f0', 'f1']
+2026-01-19 22:16:22,385 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,385 - pipeline.search_pipeline - INFO - Total Time: 0.077s
+2026-01-19 22:16:22,385 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\sqrt{x^2 + y^2}'
+   Skeleton: '\sqrt{V^N+V^N}'
+   Hash: f7bf3e4f578d1db6...
+2026-01-19 22:16:22,385 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,386 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,386 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,463 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,464 - pipeline.search_pipeline - INFO -    Top 3: ['f1', 'f0', 'f4']
+2026-01-19 22:16:22,464 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,464 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,464 - pipeline.search_pipeline - INFO -    Final Top 3: ['f1', 'f4', 'f0']
+2026-01-19 22:16:22,464 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,464 - pipeline.search_pipeline - INFO - Total Time: 0.078s
+2026-01-19 22:16:22,464 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\log(xy)'
+   Skeleton: '\logxy'
+   Hash: 715864c79cf69cb0...
+2026-01-19 22:16:22,464 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,465 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,465 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,540 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,540 - pipeline.search_pipeline - INFO -    Top 3: ['f4', 'f0', 'f2']
+2026-01-19 22:16:22,540 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,540 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,540 - pipeline.search_pipeline - INFO -    Final Top 3: ['f4', 'f0', 'f2']
+2026-01-19 22:16:22,540 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,540 - pipeline.search_pipeline - INFO - Total Time: 0.075s
+2026-01-19 22:16:22,541 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\int e^x dx'
+   Skeleton: '\inte^VVV'
+   Hash: 4aedd0801b6e8a39...
+2026-01-19 22:16:22,541 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,541 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,541 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,615 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,615 - pipeline.search_pipeline - INFO -    Top 3: ['f3', 'f2', 'f1']
+2026-01-19 22:16:22,615 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,615 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,616 - pipeline.search_pipeline - INFO -    Final Top 3: ['f3', 'f2', 'f1']
+2026-01-19 22:16:22,616 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,616 - pipeline.search_pipeline - INFO - Total Time: 0.074s
+2026-01-19 22:16:22,616 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\frac{a+b}{c+d}'
+   Skeleton: '\frac{V+V}{V+V}'
+   Hash: 7a32fbe40c6d698d...
+2026-01-19 22:16:22,616 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,617 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,617 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,691 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,691 - pipeline.search_pipeline - INFO -    Top 3: ['f2', 'f3', 'f1']
+2026-01-19 22:16:22,691 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,691 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,691 - pipeline.search_pipeline - INFO -    Final Top 3: ['f2', 'f3', 'f1']
+2026-01-19 22:16:22,691 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,691 - pipeline.search_pipeline - INFO - Total Time: 0.075s
+2026-01-19 22:16:22,691 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\sin^2 x + \cos^2 x'
+   Skeleton: '\sin^NV+\cos^NV'
+   Hash: aae8b03ae1627a6c...
+2026-01-19 22:16:22,692 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,692 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,692 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,767 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,767 - pipeline.search_pipeline - INFO -    Top 3: ['f0', 'f3', 'f2']
+2026-01-19 22:16:22,767 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,767 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,767 - pipeline.search_pipeline - INFO -    Final Top 3: ['f0', 'f3', 'f2']
+2026-01-19 22:16:22,768 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,768 - pipeline.search_pipeline - INFO - Total Time: 0.075s
+2026-01-19 22:16:22,768 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\det(A)'
+   Skeleton: '\det(V)'
+   Hash: dd6b5df26119079c...
+2026-01-19 22:16:22,768 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,768 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,769 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,848 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,848 - pipeline.search_pipeline - INFO -    Top 3: ['f4', 'f1', 'f2']
+2026-01-19 22:16:22,848 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,848 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,848 - pipeline.search_pipeline - INFO -    Final Top 3: ['f4', 'f1', 'f2']
+2026-01-19 22:16:22,849 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,849 - pipeline.search_pipeline - INFO - Total Time: 0.080s
+2026-01-19 22:16:22,849 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\mathbf{Ax} = \mathbf{b}'
+   Skeleton: '\mathbf{VV}=\mathbf{V}'
+   Hash: 5cf1cd01ce491fe6...
+2026-01-19 22:16:22,849 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,850 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,850 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:22,926 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:22,927 - pipeline.search_pipeline - INFO -    Top 3: ['f0', 'f2', 'f3']
+2026-01-19 22:16:22,927 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:22,927 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:22,927 - pipeline.search_pipeline - INFO -    Final Top 3: ['f0', 'f2', 'f3']
+2026-01-19 22:16:22,927 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:22,927 - pipeline.search_pipeline - INFO - Total Time: 0.078s
+2026-01-19 22:16:22,927 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\int_0^{\infty} e^{-x} dx'
+   Skeleton: '\int_N^{\infty}V^{-V}VV'
+   Hash: 0c02c7e7400e1fc6...
+2026-01-19 22:16:22,928 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:22,928 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:22,928 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:23,005 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:23,005 - pipeline.search_pipeline - INFO -    Top 3: ['f3', 'f4', 'f1']
+2026-01-19 22:16:23,005 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:23,005 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:23,005 - pipeline.search_pipeline - INFO -    Final Top 3: ['f3', 'f4', 'f1']
+2026-01-19 22:16:23,005 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:23,005 - pipeline.search_pipeline - INFO - Total Time: 0.077s
+2026-01-19 22:16:23,006 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\partial f / \partial x'
+   Skeleton: '\partialf/\partialx'
+   Hash: 32f83dd1aa44ca92...
+2026-01-19 22:16:23,006 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:23,006 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:23,006 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:23,080 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:23,080 - pipeline.search_pipeline - INFO -    Top 3: ['f1', 'f0', 'f4']
+2026-01-19 22:16:23,080 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:23,080 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:23,080 - pipeline.search_pipeline - INFO -    Final Top 3: ['f1', 'f0', 'f4']
+2026-01-19 22:16:23,080 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:23,080 - pipeline.search_pipeline - INFO - Total Time: 0.074s
+2026-01-19 22:16:23,081 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\sum_{k=0}^{\infty} r^k'
+   Skeleton: '\sum_{V=N}^{\infty}V^V'
+   Hash: aa5c1ded4b92d37e...
+2026-01-19 22:16:23,081 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:23,081 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:23,082 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:23,155 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:23,156 - pipeline.search_pipeline - INFO -    Top 3: ['f2', 'f1', 'f4']
+2026-01-19 22:16:23,156 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:23,156 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:23,156 - pipeline.search_pipeline - INFO -    Final Top 3: ['f2', 'f1', 'f4']
+2026-01-19 22:16:23,156 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:23,156 - pipeline.search_pipeline - INFO - Total Time: 0.075s
+2026-01-19 22:16:23,156 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: '\forall x \in \mathbb{R}'
+   Skeleton: '\forallx\in\mathbb{V}'
+   Hash: ff88a06e8a291903...
+2026-01-19 22:16:23,156 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:16:23,157 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets
+2026-01-19 22:16:23,157 - pipeline.search_pipeline - INFO - 📊 Stage 1 (Recall): 5 candidates, 耗时 0.001s
+2026-01-19 22:16:23,231 - pipeline.search_pipeline - INFO - 📊 Stage 2 (Coarse Rank): 5 candidates
+2026-01-19 22:16:23,231 - pipeline.search_pipeline - INFO -    Top 3: ['f0', 'f1', 'f2']
+2026-01-19 22:16:23,231 - pipeline.search_pipeline - INFO - 📊 Stage 3 (Filtering): 5 candidates, 过滤率: 0.00%
+2026-01-19 22:16:23,232 - pipeline.search_pipeline - INFO - 📊 Stage 4 (Graph Prior): 5 candidates
+2026-01-19 22:16:23,232 - pipeline.search_pipeline - INFO -    Final Top 3: ['f0', 'f1', 'f2']
+2026-01-19 22:16:23,232 - pipeline.search_pipeline - INFO - 📊 Final Result: 5 candidates returned
+2026-01-19 22:16:23,232 - pipeline.search_pipeline - INFO - Total Time: 0.075s
+2026-01-19 22:16:23,232 - __main__ - INFO - 
+============================================================
+2026-01-19 22:16:23,232 - __main__ - INFO - 📊 Evaluation Results
+2026-01-19 22:16:23,232 - __main__ - INFO - ============================================================
+2026-01-19 22:16:23,232 - __main__ - INFO - Recall@K            : 1.0000
+2026-01-19 22:16:23,232 - __main__ - INFO - MAP                 : 0.9175
+2026-01-19 22:16:23,232 - __main__ - INFO - nDCG@K              : 0.9542
+2026-01-19 22:16:23,236 - __main__ - INFO - 
+💾 Results saved to results/20260119_221623/
+2026-01-19 22:16:23,236 - __main__ - INFO - ============================================================
+2026-01-19 22:16:23,236 - __main__ - INFO - ✅ Evaluation Complete
+2026-01-19 22:16:23,236 - __main__ - INFO - ============================================================

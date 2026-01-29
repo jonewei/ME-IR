@@ -1,0 +1,230 @@
+2026-01-20 13:49:26,061 - INFO - ============================================================
+2026-01-20 13:49:26,061 - INFO - 🚀 Starting Mathematical Expression Retrieval Evaluation
+2026-01-20 13:49:26,061 - INFO - ============================================================
+2026-01-20 13:49:26,065 - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-20 13:49:29,300 - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-20 13:49:32,644 - INFO - 📂 Loaded index from artifacts/approach0_index.pkl (277815 buckets, 455241 formulas)
+2026-01-20 13:49:32,655 - INFO - 🔧 Building search pipeline components...
+2026-01-20 13:49:37,120 - INFO -    Features: 20
+2026-01-20 13:49:37,120 - INFO -    Normalize: False
+2026-01-20 13:49:37,120 - INFO -    Strict validation: False
+2026-01-20 13:49:37,140 - INFO - ✅ Loaded LightGBM model from models/lgbm_ranker.txt
+2026-01-20 13:49:37,141 - INFO -    Model features: 20
+2026-01-20 13:49:37,141 - INFO -    Model trees: 100
+2026-01-20 13:49:37,141 - INFO - ✅ Loading STS model: math-similarity/Bert-MLM_arXiv-MP-class_zbMath
+2026-01-20 13:49:37,141 - INFO -    Device: cuda
+2026-01-20 13:49:37,141 - INFO -    Threshold: 0.6
+2026-01-20 13:49:37,143 - INFO - Use pytorch device_name: cuda
+2026-01-20 13:49:37,143 - INFO - Load pretrained SentenceTransformer: math-similarity/Bert-MLM_arXiv-MP-class_zbMath
+2026-01-20 13:49:43,586 - INFO - ⚠️  TEST MODE: Processing only first 20 queries.
+2026-01-20 13:49:43,592 - INFO - 
+------------------------------
+2026-01-20 13:49:43,592 - INFO - 🔍 EVALUATION IN PROGRESS
+2026-01-20 13:49:43,592 - INFO - ------------------------------
+2026-01-20 13:49:43,849 - INFO - 📊 Stage 1 (Recall): 109 candidates, 耗时 0.255s
+2026-01-20 13:49:45,535 - INFO - 📊 Stage 2 (Coarse Rank): 109 candidates
+2026-01-20 13:49:45,535 - INFO -    Top 3: ['8231647', '8291597', '875396']
+2026-01-20 13:49:45,535 - INFO - 🔍 Applying STS filter (threshold=0.6) to 109 candidates
+2026-01-20 13:49:49,582 - INFO - 📊 STS filtered: 89 remaining (过滤率: 18.3%)
+2026-01-20 13:49:49,582 - INFO - 📊 Stage 3 (Filtering): 89 candidates, 过滤率: 18.35%
+2026-01-20 13:49:49,583 - INFO - 📊 Stage 4 (Graph Prior): 89 candidates
+2026-01-20 13:49:49,583 - INFO -    Final Top 3: ['8231647', '8291597', '875396']
+2026-01-20 13:49:49,583 - INFO - 📊 Final Result: 89 candidates returned
+2026-01-20 13:49:49,583 - INFO - Total Time: 5.989s
+2026-01-20 13:49:49,845 - INFO - 📊 Stage 1 (Recall): 96 candidates, 耗时 0.261s
+2026-01-20 13:49:51,102 - INFO - 📊 Stage 2 (Coarse Rank): 96 candidates
+2026-01-20 13:49:51,103 - INFO -    Top 3: ['8231819', '8230604', '2740294']
+2026-01-20 13:49:51,103 - INFO - 🔍 Applying STS filter (threshold=0.6) to 96 candidates
+2026-01-20 13:49:54,555 - INFO - 📊 STS filtered: 83 remaining (过滤率: 13.5%)
+2026-01-20 13:49:54,555 - INFO - 📊 Stage 3 (Filtering): 83 candidates, 过滤率: 13.54%
+2026-01-20 13:49:54,555 - INFO - 📊 Stage 4 (Graph Prior): 83 candidates
+2026-01-20 13:49:54,555 - INFO -    Final Top 3: ['8231819', '8230604', '2740294']
+2026-01-20 13:49:54,555 - INFO - 📊 Final Result: 83 candidates returned
+2026-01-20 13:49:54,555 - INFO - Total Time: 4.971s
+2026-01-20 13:49:54,556 - INFO - 📊 Stage 1 (Recall): 14 candidates, 耗时 0.000s
+2026-01-20 13:49:54,744 - INFO - 📊 Stage 2 (Coarse Rank): 14 candidates
+2026-01-20 13:49:54,744 - INFO -    Top 3: ['448041', '3511925', '5218087']
+2026-01-20 13:49:54,744 - INFO - 🔍 Applying STS filter (threshold=0.6) to 14 candidates
+2026-01-20 13:49:55,240 - INFO - 📊 STS filtered: 14 remaining (过滤率: 0.0%)
+2026-01-20 13:49:55,240 - INFO - 📊 Stage 3 (Filtering): 14 candidates, 过滤率: 0.00%
+2026-01-20 13:49:55,240 - INFO - 📊 Stage 4 (Graph Prior): 14 candidates
+2026-01-20 13:49:55,240 - INFO -    Final Top 3: ['448041', '3511925', '2601425']
+2026-01-20 13:49:55,240 - INFO - 📊 Final Result: 14 candidates returned
+2026-01-20 13:49:55,241 - INFO - Total Time: 0.684s
+2026-01-20 13:49:55,497 - INFO - 📊 Stage 1 (Recall): 68 candidates, 耗时 0.256s
+2026-01-20 13:49:56,376 - INFO - 📊 Stage 2 (Coarse Rank): 68 candidates
+2026-01-20 13:49:56,376 - INFO -    Top 3: ['8231150', '8169855', '5775910']
+2026-01-20 13:49:56,376 - INFO - 🔍 Applying STS filter (threshold=0.6) to 68 candidates
+2026-01-20 13:49:58,801 - INFO - 📊 STS filtered: 52 remaining (过滤率: 23.5%)
+2026-01-20 13:49:58,801 - INFO - 📊 Stage 3 (Filtering): 52 candidates, 过滤率: 23.53%
+2026-01-20 13:49:58,801 - INFO - 📊 Stage 4 (Graph Prior): 52 candidates
+2026-01-20 13:49:58,801 - INFO -    Final Top 3: ['8169855', '5775910', '8295721']
+2026-01-20 13:49:58,802 - INFO - 📊 Final Result: 52 candidates returned
+2026-01-20 13:49:58,802 - INFO - Total Time: 3.560s
+2026-01-20 13:49:59,076 - INFO - 📊 Stage 1 (Recall): 68 candidates, 耗时 0.274s
+2026-01-20 13:49:59,972 - INFO - 📊 Stage 2 (Coarse Rank): 68 candidates
+2026-01-20 13:49:59,972 - INFO -    Top 3: ['8230049', '8232105', '827311']
+2026-01-20 13:49:59,972 - INFO - 🔍 Applying STS filter (threshold=0.6) to 68 candidates
+2026-01-20 13:50:02,408 - INFO - 📊 STS filtered: 66 remaining (过滤率: 2.9%)
+2026-01-20 13:50:02,408 - INFO - 📊 Stage 3 (Filtering): 66 candidates, 过滤率: 2.94%
+2026-01-20 13:50:02,409 - INFO - 📊 Stage 4 (Graph Prior): 66 candidates
+2026-01-20 13:50:02,409 - INFO -    Final Top 3: ['8230049', '8232105', '827311']
+2026-01-20 13:50:02,409 - INFO - 📊 Final Result: 66 candidates returned
+2026-01-20 13:50:02,409 - INFO - Total Time: 3.606s
+2026-01-20 13:50:02,678 - INFO - 📊 Stage 1 (Recall): 56 candidates, 耗时 0.269s
+2026-01-20 13:50:03,425 - INFO - 📊 Stage 2 (Coarse Rank): 56 candidates
+2026-01-20 13:50:03,425 - INFO -    Top 3: ['63345', '8230509', '5779824']
+2026-01-20 13:50:03,426 - INFO - 🔍 Applying STS filter (threshold=0.6) to 56 candidates
+2026-01-20 13:50:05,429 - INFO - 📊 STS filtered: 54 remaining (过滤率: 3.6%)
+2026-01-20 13:50:05,429 - INFO - 📊 Stage 3 (Filtering): 54 candidates, 过滤率: 3.57%
+2026-01-20 13:50:05,430 - INFO - 📊 Stage 4 (Graph Prior): 54 candidates
+2026-01-20 13:50:05,430 - INFO -    Final Top 3: ['63345', '8230509', '5779824']
+2026-01-20 13:50:05,430 - INFO - 📊 Final Result: 54 candidates returned
+2026-01-20 13:50:05,430 - INFO - Total Time: 3.020s
+2026-01-20 13:50:05,677 - INFO - 📊 Stage 1 (Recall): 170 candidates, 耗时 0.247s
+2026-01-20 13:50:07,838 - INFO - 📊 Stage 2 (Coarse Rank): 170 candidates
+2026-01-20 13:50:07,838 - INFO -    Top 3: ['8230576', '8233310', '8231014']
+2026-01-20 13:50:07,838 - INFO - 🔍 Applying STS filter (threshold=0.6) to 170 candidates
+2026-01-20 13:50:13,910 - INFO - 📊 STS filtered: 157 remaining (过滤率: 7.6%)
+2026-01-20 13:50:13,911 - INFO - 📊 Stage 3 (Filtering): 157 candidates, 过滤率: 7.65%
+2026-01-20 13:50:13,911 - INFO - 📊 Stage 4 (Graph Prior): 157 candidates
+2026-01-20 13:50:13,911 - INFO -    Final Top 3: ['8233310', '8231014', '876785']
+2026-01-20 13:50:13,911 - INFO - 📊 Final Result: 157 candidates returned
+2026-01-20 13:50:13,911 - INFO - Total Time: 8.480s
+2026-01-20 13:50:14,231 - INFO - 📊 Stage 1 (Recall): 50 candidates, 耗时 0.319s
+2026-01-20 13:50:14,909 - INFO - 📊 Stage 2 (Coarse Rank): 50 candidates
+2026-01-20 13:50:14,909 - INFO -    Top 3: ['8232654', '6663253', '8233160']
+2026-01-20 13:50:14,909 - INFO - 🔍 Applying STS filter (threshold=0.6) to 50 candidates
+2026-01-20 13:50:16,702 - INFO - 📊 STS filtered: 22 remaining (过滤率: 56.0%)
+2026-01-20 13:50:16,702 - INFO - 📊 Stage 3 (Filtering): 22 candidates, 过滤率: 56.00%
+2026-01-20 13:50:16,702 - INFO - 📊 Stage 4 (Graph Prior): 22 candidates
+2026-01-20 13:50:16,702 - INFO -    Final Top 3: ['8232654', '8233160', '8230360']
+2026-01-20 13:50:16,702 - INFO - 📊 Final Result: 22 candidates returned
+2026-01-20 13:50:16,702 - INFO - Total Time: 2.790s
+2026-01-20 13:50:16,703 - INFO - 📊 Stage 1 (Recall): 57 candidates, 耗时 0.000s
+2026-01-20 13:50:17,428 - INFO - 📊 Stage 2 (Coarse Rank): 57 candidates
+2026-01-20 13:50:17,428 - INFO -    Top 3: ['20760', '33258', '49925']
+2026-01-20 13:50:17,428 - INFO - 🔍 Applying STS filter (threshold=0.6) to 57 candidates
+2026-01-20 13:50:19,449 - INFO - 📊 STS filtered: 30 remaining (过滤率: 47.4%)
+2026-01-20 13:50:19,449 - INFO - 📊 Stage 3 (Filtering): 30 candidates, 过滤率: 47.37%
+2026-01-20 13:50:19,449 - INFO - 📊 Stage 4 (Graph Prior): 30 candidates
+2026-01-20 13:50:19,449 - INFO -    Final Top 3: ['33258', '55755', '20760']
+2026-01-20 13:50:19,449 - INFO - 📊 Final Result: 30 candidates returned
+2026-01-20 13:50:19,449 - INFO - Total Time: 2.746s
+2026-01-20 13:50:19,702 - INFO - 📊 Stage 1 (Recall): 79 candidates, 耗时 0.252s
+2026-01-20 13:50:20,726 - INFO - 📊 Stage 2 (Coarse Rank): 79 candidates
+2026-01-20 13:50:20,726 - INFO -    Top 3: ['8187851', '8233253', '8231248']
+2026-01-20 13:50:20,726 - INFO - 🔍 Applying STS filter (threshold=0.6) to 79 candidates
+2026-01-20 13:50:23,531 - INFO - 📊 STS filtered: 71 remaining (过滤率: 10.1%)
+2026-01-20 13:50:23,531 - INFO - 📊 Stage 3 (Filtering): 71 candidates, 过滤率: 10.13%
+2026-01-20 13:50:23,532 - INFO - 📊 Stage 4 (Graph Prior): 71 candidates
+2026-01-20 13:50:23,532 - INFO -    Final Top 3: ['8187851', '8233253', '8231248']
+2026-01-20 13:50:23,532 - INFO - 📊 Final Result: 71 candidates returned
+2026-01-20 13:50:23,532 - INFO - Total Time: 4.081s
+2026-01-20 13:50:23,781 - INFO - 📊 Stage 1 (Recall): 87 candidates, 耗时 0.248s
+2026-01-20 13:50:24,893 - INFO - 📊 Stage 2 (Coarse Rank): 87 candidates
+2026-01-20 13:50:24,893 - INFO -    Top 3: ['8230133', '460677', '202641']
+2026-01-20 13:50:24,893 - INFO - 🔍 Applying STS filter (threshold=0.6) to 87 candidates
+2026-01-20 13:50:27,978 - INFO - 📊 STS filtered: 83 remaining (过滤率: 4.6%)
+2026-01-20 13:50:27,978 - INFO - 📊 Stage 3 (Filtering): 83 candidates, 过滤率: 4.60%
+2026-01-20 13:50:27,979 - INFO - 📊 Stage 4 (Graph Prior): 83 candidates
+2026-01-20 13:50:27,979 - INFO -    Final Top 3: ['8230133', '202641', '2558265']
+2026-01-20 13:50:27,979 - INFO - 📊 Final Result: 83 candidates returned
+2026-01-20 13:50:27,979 - INFO - Total Time: 4.445s
+2026-01-20 13:50:28,240 - INFO - 📊 Stage 1 (Recall): 87 candidates, 耗时 0.261s
+2026-01-20 13:50:29,387 - INFO - 📊 Stage 2 (Coarse Rank): 87 candidates
+2026-01-20 13:50:29,387 - INFO -    Top 3: ['8233060', '8248510', '8230835']
+2026-01-20 13:50:29,387 - INFO - 🔍 Applying STS filter (threshold=0.6) to 87 candidates
+2026-01-20 13:50:32,496 - INFO - 📊 STS filtered: 39 remaining (过滤率: 55.2%)
+2026-01-20 13:50:32,496 - INFO - 📊 Stage 3 (Filtering): 39 candidates, 过滤率: 55.17%
+2026-01-20 13:50:32,497 - INFO - 📊 Stage 4 (Graph Prior): 39 candidates
+2026-01-20 13:50:32,497 - INFO -    Final Top 3: ['8233060', '8230835', '8219930']
+2026-01-20 13:50:32,497 - INFO - 📊 Final Result: 39 candidates returned
+2026-01-20 13:50:32,497 - INFO - Total Time: 4.517s
+2026-01-20 13:50:32,498 - INFO - 📊 Stage 1 (Recall): 3 candidates, 耗时 0.000s
+2026-01-20 13:50:32,548 - INFO - 📊 Stage 2 (Coarse Rank): 3 candidates
+2026-01-20 13:50:32,548 - INFO -    Top 3: ['8263814', '3494318', '8243351']
+2026-01-20 13:50:32,548 - INFO - 🔍 Applying STS filter (threshold=0.6) to 3 candidates
+2026-01-20 13:50:32,653 - INFO - 📊 STS filtered: 3 remaining (过滤率: 0.0%)
+2026-01-20 13:50:32,653 - INFO - 📊 Stage 3 (Filtering): 3 candidates, 过滤率: 0.00%
+2026-01-20 13:50:32,654 - INFO - 📊 Stage 4 (Graph Prior): 3 candidates
+2026-01-20 13:50:32,654 - INFO -    Final Top 3: ['8263814', '3494318', '8243351']
+2026-01-20 13:50:32,654 - INFO - 📊 Final Result: 3 candidates returned
+2026-01-20 13:50:32,654 - INFO - Total Time: 0.156s
+2026-01-20 13:50:32,895 - INFO - 📊 Stage 1 (Recall): 209 candidates, 耗时 0.241s
+2026-01-20 13:50:35,563 - INFO - 📊 Stage 2 (Coarse Rank): 209 candidates
+2026-01-20 13:50:35,563 - INFO -    Top 3: ['8247219', '1084913', '106975']
+2026-01-20 13:50:35,563 - INFO - 🔍 Applying STS filter (threshold=0.6) to 209 candidates
+2026-01-20 13:50:43,003 - INFO - 📊 STS filtered: 196 remaining (过滤率: 6.2%)
+2026-01-20 13:50:43,004 - INFO - 📊 Stage 3 (Filtering): 196 candidates, 过滤率: 6.22%
+2026-01-20 13:50:43,005 - INFO - 📊 Stage 4 (Graph Prior): 196 candidates
+2026-01-20 13:50:43,005 - INFO -    Final Top 3: ['8247219', '1084913', '106975']
+2026-01-20 13:50:43,006 - INFO - 📊 Final Result: 196 candidates returned
+2026-01-20 13:50:43,006 - INFO - Total Time: 10.351s
+2026-01-20 13:50:43,251 - INFO - 📊 Stage 1 (Recall): 1327 candidates, 耗时 0.245s
+2026-01-20 13:51:00,049 - INFO - 📊 Stage 2 (Coarse Rank): 1000 candidates
+2026-01-20 13:51:00,049 - INFO -    Top 3: ['64335', '8297705', '34161']
+2026-01-20 13:51:00,049 - INFO - 🔍 Applying STS filter (threshold=0.6) to 1000 candidates
+2026-01-20 13:51:35,663 - INFO - 📊 STS filtered: 776 remaining (过滤率: 22.4%)
+2026-01-20 13:51:35,663 - INFO - 📊 Stage 3 (Filtering): 776 candidates, 过滤率: 22.40%
+2026-01-20 13:51:35,669 - INFO - 📊 Stage 4 (Graph Prior): 776 candidates
+2026-01-20 13:51:35,669 - INFO -    Final Top 3: ['34161', '64335', '8297705']
+2026-01-20 13:51:35,669 - INFO - 📊 Final Result: 776 candidates returned
+2026-01-20 13:51:35,669 - INFO - Total Time: 52.662s
+2026-01-20 13:51:35,939 - INFO - 📊 Stage 1 (Recall): 56 candidates, 耗时 0.269s
+2026-01-20 13:51:36,675 - INFO - 📊 Stage 2 (Coarse Rank): 56 candidates
+2026-01-20 13:51:36,675 - INFO -    Top 3: ['8229907', '8230404', '4239378']
+2026-01-20 13:51:36,675 - INFO - 🔍 Applying STS filter (threshold=0.6) to 56 candidates
+2026-01-20 13:51:38,687 - INFO - 📊 STS filtered: 10 remaining (过滤率: 82.1%)
+2026-01-20 13:51:38,687 - INFO - 📊 Stage 3 (Filtering): 10 candidates, 过滤率: 82.14%
+2026-01-20 13:51:38,687 - INFO - 📊 Stage 4 (Graph Prior): 10 candidates
+2026-01-20 13:51:38,687 - INFO -    Final Top 3: ['8229907', '8231670', '8231150']
+2026-01-20 13:51:38,687 - INFO - 📊 Final Result: 10 candidates returned
+2026-01-20 13:51:38,688 - INFO - Total Time: 3.017s
+2026-01-20 13:51:38,941 - INFO - 📊 Stage 1 (Recall): 63 candidates, 耗时 0.253s
+2026-01-20 13:51:39,782 - INFO - 📊 Stage 2 (Coarse Rank): 63 candidates
+2026-01-20 13:51:39,782 - INFO -    Top 3: ['8232956', '7190463', '8231383']
+2026-01-20 13:51:39,782 - INFO - 🔍 Applying STS filter (threshold=0.6) to 63 candidates
+2026-01-20 13:51:42,058 - INFO - 📊 STS filtered: 60 remaining (过滤率: 4.8%)
+2026-01-20 13:51:42,058 - INFO - 📊 Stage 3 (Filtering): 60 candidates, 过滤率: 4.76%
+2026-01-20 13:51:42,059 - INFO - 📊 Stage 4 (Graph Prior): 60 candidates
+2026-01-20 13:51:42,059 - INFO -    Final Top 3: ['8232956', '7190463', '8231383']
+2026-01-20 13:51:42,059 - INFO - 📊 Final Result: 60 candidates returned
+2026-01-20 13:51:42,059 - INFO - Total Time: 3.370s
+2026-01-20 13:51:42,060 - INFO - 📊 Stage 1 (Recall): 1 candidates, 耗时 0.000s
+2026-01-20 13:51:42,085 - INFO - 📊 Stage 2 (Coarse Rank): 1 candidates
+2026-01-20 13:51:42,085 - INFO -    Top 3: ['1117979']
+2026-01-20 13:51:42,085 - INFO - 🔍 Applying STS filter (threshold=0.6) to 1 candidates
+2026-01-20 13:51:42,121 - INFO - 📊 STS filtered: 1 remaining (过滤率: 0.0%)
+2026-01-20 13:51:42,121 - INFO - 📊 Stage 3 (Filtering): 1 candidates, 过滤率: 0.00%
+2026-01-20 13:51:42,122 - INFO - 📊 Stage 4 (Graph Prior): 1 candidates
+2026-01-20 13:51:42,122 - INFO -    Final Top 3: ['1117979']
+2026-01-20 13:51:42,122 - INFO - 📊 Final Result: 1 candidates returned
+2026-01-20 13:51:42,122 - INFO - Total Time: 0.061s
+2026-01-20 13:51:42,123 - INFO - 📊 Stage 1 (Recall): 1 candidates, 耗时 0.000s
+2026-01-20 13:51:42,148 - INFO - 📊 Stage 2 (Coarse Rank): 1 candidates
+2026-01-20 13:51:42,148 - INFO -    Top 3: ['3888797']
+2026-01-20 13:51:42,148 - INFO - 🔍 Applying STS filter (threshold=0.6) to 1 candidates
+2026-01-20 13:51:42,184 - INFO - 📊 STS filtered: 1 remaining (过滤率: 0.0%)
+2026-01-20 13:51:42,184 - INFO - 📊 Stage 3 (Filtering): 1 candidates, 过滤率: 0.00%
+2026-01-20 13:51:42,184 - INFO - 📊 Stage 4 (Graph Prior): 1 candidates
+2026-01-20 13:51:42,184 - INFO -    Final Top 3: ['3888797']
+2026-01-20 13:51:42,184 - INFO - 📊 Final Result: 1 candidates returned
+2026-01-20 13:51:42,184 - INFO - Total Time: 0.061s
+2026-01-20 13:51:42,444 - INFO - 📊 Stage 1 (Recall): 62 candidates, 耗时 0.259s
+2026-01-20 13:51:43,251 - INFO - 📊 Stage 2 (Coarse Rank): 62 candidates
+2026-01-20 13:51:43,251 - INFO -    Top 3: ['68539', '8233246', '1291']
+2026-01-20 13:51:43,251 - INFO - 🔍 Applying STS filter (threshold=0.6) to 62 candidates
+2026-01-20 13:51:45,511 - INFO - 📊 STS filtered: 58 remaining (过滤率: 6.5%)
+2026-01-20 13:51:45,511 - INFO - 📊 Stage 3 (Filtering): 58 candidates, 过滤率: 6.45%
+2026-01-20 13:51:45,512 - INFO - 📊 Stage 4 (Graph Prior): 58 candidates
+2026-01-20 13:51:45,512 - INFO -    Final Top 3: ['68539', '1291', '8233246']
+2026-01-20 13:51:45,512 - INFO - 📊 Final Result: 58 candidates returned
+2026-01-20 13:51:45,512 - INFO - Total Time: 3.326s
+2026-01-20 13:51:45,529 - INFO - 💾 TREC run saved to results/20260120_135145/run.trec
+2026-01-20 13:51:45,532 - INFO - 
+============================================================
+2026-01-20 13:51:45,532 - INFO - ✅ Evaluation Complete!
+2026-01-20 13:51:45,532 - INFO - 📊 Results directory: results/20260120_135145
+2026-01-20 13:51:45,532 - INFO - 📈  Metrics: {'Recall@K': 0.25, 'MAP': 0.002293352679330376, 'nDCG@K': 0.13888162778188592}
+2026-01-20 13:51:45,532 - INFO - ============================================================

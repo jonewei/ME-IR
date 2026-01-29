@@ -1,0 +1,54 @@
+2026-01-19 22:08:44,541 - __main__ - INFO - ============================================================
+2026-01-19 22:08:44,541 - __main__ - INFO - 🚀 Starting Evaluation
+2026-01-19 22:08:44,541 - __main__ - INFO - ============================================================
+2026-01-19 22:08:44,541 - __main__ - INFO - 📋 Loading config from experiments/exp_full.yaml
+2026-01-19 22:08:44,545 - __main__ - INFO -    Config loaded: 7 sections
+2026-01-19 22:08:44,545 - __main__ - INFO - 📂 Loading formulas from data/processed/formulas.json
+2026-01-19 22:08:44,545 - __main__ - INFO - ✅ Loaded 5 formulas
+2026-01-19 22:08:44,545 - __main__ - INFO - 📂 Loading pre-built index from artifacts/approach0_index.pkl
+2026-01-19 22:08:44,546 - retrieval.approach0_hash - INFO - 📂 Loaded index from artifacts/approach0_index.pkl (3 buckets, 5 formulas)
+2026-01-19 22:08:44,546 - __main__ - INFO - ✅ Index loaded: 3 hash buckets, 5 formulas
+2026-01-19 22:08:44,546 - __main__ - INFO - 📊 Index statistics:
+2026-01-19 22:08:44,546 - __main__ - INFO -    Total buckets: 3
+2026-01-19 22:08:44,546 - __main__ - INFO -    Avg bucket size: 1.67
+2026-01-19 22:08:44,546 - __main__ - INFO -    Collision rate: 66.67%
+2026-01-19 22:08:44,546 - __main__ - INFO - 🔧 Building search pipeline...
+2026-01-19 22:08:48,003 - ranking.feature_builder - INFO -    Features: 20
+2026-01-19 22:08:48,004 - ranking.feature_builder - INFO -    Normalize: False
+2026-01-19 22:08:48,004 - ranking.feature_builder - INFO -    Strict validation: False
+2026-01-19 22:08:48,020 - ranking.lgbm_ranker - INFO - ✅ Loaded LightGBM model from models/lgbm_ranker.txt
+2026-01-19 22:08:48,020 - ranking.lgbm_ranker - INFO -    Model features: 20
+2026-01-19 22:08:48,020 - ranking.lgbm_ranker - INFO -    Model trees: 100
+2026-01-19 22:08:53,092 - filtering.formula_sts_model - INFO - ✅ Loaded STS model: bert-base-uncased
+2026-01-19 22:08:53,092 - filtering.formula_sts_model - INFO -    Device: cuda
+2026-01-19 22:08:53,093 - filtering.formula_sts_model - INFO -    Max length: 256
+2026-01-19 22:08:53,093 - filtering.formula_sts_model - INFO -    Threshold: 0.92
+2026-01-19 22:08:53,093 - filtering.formula_sts_model - INFO -    Model labels: {0: 'LABEL_0', 1: 'LABEL_1'}
+2026-01-19 22:08:53,093 - filtering.formula_sts_model - WARNING - ⚠️  Label mapping mismatch!
+   Expected: {0: 'different', 1: 'similar'}
+   Model config: {0: 'LABEL_0', 1: 'LABEL_1'}
+2026-01-19 22:08:53,093 - __main__ - INFO - 📂 Loading PageRank from artifacts/pagerank.pkl
+2026-01-19 22:08:53,093 - __main__ - INFO - 📊 PageRank stats:
+2026-01-19 22:08:53,093 - __main__ - INFO -    Min: 0.064191
+2026-01-19 22:08:53,093 - __main__ - INFO -    Max: 0.387002
+2026-01-19 22:08:53,093 - __main__ - INFO -    Mean: 0.200000
+2026-01-19 22:08:53,093 - __main__ - INFO - ✅ Pipeline built successfully
+2026-01-19 22:08:53,093 - __main__ - INFO - 📂 Loading queries from data/processed/queries.json
+2026-01-19 22:08:53,094 - __main__ - INFO - ✅ Loaded 20 queries
+2026-01-19 22:08:53,094 - __main__ - INFO - 📊 Query statistics:
+2026-01-19 22:08:53,094 - __main__ - INFO -    Avg length: 17.2 chars
+2026-01-19 22:08:53,094 - __main__ - INFO -    Max length: 31 chars
+2026-01-19 22:08:53,094 - __main__ - INFO - 📂 Loading relevance labels from data/processed/relevance_labels.json
+2026-01-19 22:08:53,094 - __main__ - INFO - ✅ Loaded relevance labels:
+2026-01-19 22:08:53,094 - __main__ - INFO -    Queries: 20
+2026-01-19 22:08:53,094 - __main__ - INFO -    Total relevant pairs: 100
+2026-01-19 22:08:53,094 - __main__ - INFO -    Avg relevant per query: 5.0
+2026-01-19 22:08:53,095 - __main__ - INFO - 
+============================================================
+2026-01-19 22:08:53,095 - __main__ - INFO - 🔍 Running Evaluation
+2026-01-19 22:08:53,095 - __main__ - INFO - ============================================================
+2026-01-19 22:08:53,095 - retrieval.approach0_hash - INFO - 🔍 [Approach0] Query: 'x^2 + y^2'
+   Skeleton: 'V^N+V^N'
+   Hash: 1b9dae9a97c65569...
+2026-01-19 22:08:53,095 - retrieval.approach0_hash - INFO - ⚠️  [Approach0] No exact match, using fuzzy retrieval
+2026-01-19 22:08:53,096 - retrieval.approach0_hash - INFO - ✅ [Approach0] Fuzzy match: 5 formulas from 3 buckets

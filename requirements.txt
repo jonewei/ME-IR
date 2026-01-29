@@ -1,0 +1,24 @@
+# ---- core numeric ----
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+
+# ---- ML / graph ----
+scikit-learn>=1.3
+networkx>=3.1
+tqdm
+pyyaml
+
+# ---- retrieval / NLP ----
+transformers>=4.40
+sentencepiece
+tokenizers>=0.15
+
+# ---- utils ----
+einops
+rich
+loguru
+
+# ---- optional (if used) ----
+faiss-cpu
+

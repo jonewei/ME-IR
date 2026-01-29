@@ -1,0 +1,26 @@
+
+name: "structural_only"
+description: "Ablation: Only use structural recall (no semantic ranking)"
+
+data:
+  formulas: "data/processed/formulas.json"
+  queries: "data/processed/queries.json"
+  labels: "data/processed/relevance_labels.json"
+  index: "artifacts/approach0_index.pkl"
+  pagerank: null
+
+models:
+  mathbert: null      # ✅ 禁用 MathBERT
+  ranker: null        # ✅ 禁用排序
+  sts: null           # ✅ 禁用过滤
+
+pipeline:
+  topk_recall: 10     # ✅ 直接返回召回结果
+  topk_rank: 10
+  final_k: 10
+  sts_threshold: 0.0  # ✅ 禁用过滤
+  derive_alpha: 0.0
+
+features:
+  num_features: 6
+  normalize: false

@@ -1,0 +1,14 @@
+name: "no_graph_prior"
+description: "Ablation: Remove graph reranking stage"
+
+data:
+  formulas: "data/processed/formulas.json"
+  queries: "data/processed/queries.json"
+  labels: "data/processed/relevance_labels.json"
+  index: "artifacts/approach0_index.pkl"
+  pagerank: null  # ✅ 禁用 PageRank
+
+models:
+  mathbert: "math-bert-base"
+  ranker: "models/lgbm_ranker.txt"
+  sts: "models/formula_sts
